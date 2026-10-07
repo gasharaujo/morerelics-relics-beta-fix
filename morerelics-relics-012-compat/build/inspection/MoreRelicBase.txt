@@ -1,0 +1,150 @@
+Compiled from "MoreRelicBase.java"
+public abstract class com.blorb.morerelics.relics.MoreRelicBase extends it.hurts.sskirillss.relics.items.relics.base.RelicItem {
+  public com.blorb.morerelics.relics.MoreRelicBase(net.minecraft.world.item.Item$Properties);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: invokespecial #1                  // Method it/hurts/sskirillss/relics/items/relics/base/RelicItem."<init>":(Lnet/minecraft/world/item/Item$Properties;)V
+         5: return
+
+  public com.blorb.morerelics.relics.MoreRelicBase();
+    Code:
+         0: aload_0
+         1: new           #7                  // class net/minecraft/world/item/Item$Properties
+         4: dup
+         5: invokespecial #9                  // Method net/minecraft/world/item/Item$Properties."<init>":()V
+         8: getstatic     #12                 // Field net/minecraft/world/item/Rarity.RARE:Lnet/minecraft/world/item/Rarity;
+        11: invokevirtual #18                 // Method net/minecraft/world/item/Item$Properties.rarity:(Lnet/minecraft/world/item/Rarity;)Lnet/minecraft/world/item/Item$Properties;
+        14: iconst_1
+        15: invokevirtual #22                 // Method net/minecraft/world/item/Item$Properties.stacksTo:(I)Lnet/minecraft/world/item/Item$Properties;
+        18: invokespecial #1                  // Method it/hurts/sskirillss/relics/items/relics/base/RelicItem."<init>":(Lnet/minecraft/world/item/Item$Properties;)V
+        21: return
+
+  public boolean onEntityItemUpdate(net.minecraft.world.item.ItemStack, net.minecraft.world.entity.item.ItemEntity);
+    Code:
+         0: aload_2
+         1: iconst_1
+         2: invokevirtual #26                 // Method net/minecraft/world/entity/item/ItemEntity.setGlowingTag:(Z)V
+         5: aload_0
+         6: aload_1
+         7: aload_2
+         8: invokespecial #32                 // Method it/hurts/sskirillss/relics/items/relics/base/RelicItem.onEntityItemUpdate:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/item/ItemEntity;)Z
+        11: ireturn
+
+  public java.lang.String getConfigRoute();
+    Code:
+         0: ldc           #38                 // String morerelics
+         2: areturn
+
+  public boolean canEquipMultipleCopies();
+    Code:
+         0: getstatic     #40                 // Field net/minecraft/core/registries/BuiltInRegistries.ITEM:Lnet/minecraft/core/DefaultedRegistry;
+         3: aload_0
+         4: invokeinterface #46,  2           // InterfaceMethod net/minecraft/core/DefaultedRegistry.getKey:(Ljava/lang/Object;)Lnet/minecraft/resources/ResourceLocation;
+         9: invokevirtual #52                 // Method net/minecraft/resources/ResourceLocation.toString:()Ljava/lang/String;
+        12: astore_1
+        13: getstatic     #58                 // Field com/blorb/morerelics/Config.CANT_WEAR_COPIES:Lnet/neoforged/neoforge/common/ModConfigSpec$ConfigValue;
+        16: invokevirtual #64                 // Method net/neoforged/neoforge/common/ModConfigSpec$ConfigValue.get:()Ljava/lang/Object;
+        19: checkcast     #70                 // class java/util/List
+        22: aload_1
+        23: invokeinterface #72,  2           // InterfaceMethod java/util/List.contains:(Ljava/lang/Object;)Z
+        28: ifne          35
+        31: iconst_1
+        32: goto          36
+        35: iconst_0
+        36: ireturn
+        37: astore_1
+        38: iconst_1
+        39: ireturn
+      Exception table:
+         from    to  target type
+             0    36    37   Class java/lang/Exception
+
+  public java.util.List<net.minecraft.network.chat.Component> getSlotsTooltip(java.util.List<net.minecraft.network.chat.Component>, net.minecraft.world.item.Item$TooltipContext, net.minecraft.world.item.ItemStack);
+    Code:
+         0: aload_0
+         1: invokevirtual #78                 // Method canEquipMultipleCopies:()Z
+         4: ifne          52
+         7: new           #84                 // class java/util/ArrayList
+        10: dup
+        11: aload_1
+        12: invokeinterface #86,  1           // InterfaceMethod java/util/List.stream:()Ljava/util/stream/Stream;
+        17: invokeinterface #90,  1           // InterfaceMethod java/util/stream/Stream.toList:()Ljava/util/List;
+        22: invokespecial #96                 // Method java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+        25: astore        4
+        27: aload         4
+        29: ldc           #99                 // String tooltip.morerelics.only_one_disclaimer
+        31: invokestatic  #101                // InterfaceMethod net/minecraft/network/chat/Component.translatable:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+        34: getstatic     #107                // Field java/awt/Color.ORANGE:Ljava/awt/Color;
+        37: invokevirtual #113                // Method java/awt/Color.getRGB:()I
+        40: invokevirtual #117                // Method net/minecraft/network/chat/MutableComponent.withColor:(I)Lnet/minecraft/network/chat/MutableComponent;
+        43: invokeinterface #123,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+        48: pop
+        49: aload         4
+        51: areturn
+        52: aload_0
+        53: aload_1
+        54: aload_2
+        55: aload_3
+        56: invokespecial #126                // Method it/hurts/sskirillss/relics/items/relics/base/RelicItem.getSlotsTooltip:(Ljava/util/List;Lnet/minecraft/world/item/Item$TooltipContext;Lnet/minecraft/world/item/ItemStack;)Ljava/util/List;
+        59: areturn
+
+  public boolean canEquip(top.theillusivec4.curios.api.SlotContext, net.minecraft.world.item.ItemStack);
+    Code:
+         0: aload_0
+         1: invokevirtual #78                 // Method canEquipMultipleCopies:()Z
+         4: ifeq          14
+         7: aload_0
+         8: aload_1
+         9: aload_2
+        10: invokespecial #130                // Method it/hurts/sskirillss/relics/items/relics/base/RelicItem.canEquip:(Ltop/theillusivec4/curios/api/SlotContext;Lnet/minecraft/world/item/ItemStack;)Z
+        13: ireturn
+        14: aload_1
+        15: invokevirtual #134                // Method top/theillusivec4/curios/api/SlotContext.entity:()Lnet/minecraft/world/entity/LivingEntity;
+        18: invokestatic  #140                // Method com/blorb/morerelics/MoreRelicsUtil.actuallyGetEquippedRelicsWithSlots:(Lnet/minecraft/world/entity/LivingEntity;)Ljava/util/List;
+        21: invokeinterface #86,  1           // InterfaceMethod java/util/List.stream:()Ljava/util/stream/Stream;
+        26: aload_0
+        27: aload_1
+        28: invokedynamic #146,  0            // InvokeDynamic #0:test:(Lcom/blorb/morerelics/relics/MoreRelicBase;Ltop/theillusivec4/curios/api/SlotContext;)Ljava/util/function/Predicate;
+        33: invokeinterface #150,  2          // InterfaceMethod java/util/stream/Stream.anyMatch:(Ljava/util/function/Predicate;)Z
+        38: istore_3
+        39: iload_3
+        40: ifeq          54
+        43: aload_0
+        44: aload_1
+        45: aload_2
+        46: invokespecial #130                // Method it/hurts/sskirillss/relics/items/relics/base/RelicItem.canEquip:(Ltop/theillusivec4/curios/api/SlotContext;Lnet/minecraft/world/item/ItemStack;)Z
+        49: ifeq          54
+        52: iconst_0
+        53: ireturn
+        54: aload_0
+        55: aload_1
+        56: aload_2
+        57: invokespecial #130                // Method it/hurts/sskirillss/relics/items/relics/base/RelicItem.canEquip:(Ltop/theillusivec4/curios/api/SlotContext;Lnet/minecraft/world/item/ItemStack;)Z
+        60: ireturn
+
+  private boolean lambda$canEquip$0(top.theillusivec4.curios.api.SlotContext, com.blorb.morerelics.MoreRelicsUtil$EquippedRelic);
+    Code:
+         0: aload_2
+         1: invokevirtual #154                // Method com/blorb/morerelics/MoreRelicsUtil$EquippedRelic.stack:()Lnet/minecraft/world/item/ItemStack;
+         4: invokevirtual #160                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+         7: invokevirtual #166                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+        10: aload_0
+        11: invokevirtual #166                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+        14: if_acmpne     46
+        17: aload_1
+        18: invokevirtual #172                // Method top/theillusivec4/curios/api/SlotContext.index:()I
+        21: aload_2
+        22: invokevirtual #175                // Method com/blorb/morerelics/MoreRelicsUtil$EquippedRelic.slotIndex:()I
+        25: if_icmpne     42
+        28: aload_1
+        29: invokevirtual #178                // Method top/theillusivec4/curios/api/SlotContext.identifier:()Ljava/lang/String;
+        32: aload_2
+        33: invokevirtual #181                // Method com/blorb/morerelics/MoreRelicsUtil$EquippedRelic.slotId:()Ljava/lang/String;
+        36: invokestatic  #184                // Method java/util/Objects.equals:(Ljava/lang/Object;Ljava/lang/Object;)Z
+        39: ifne          46
+        42: iconst_1
+        43: goto          47
+        46: iconst_0
+        47: ireturn
+}

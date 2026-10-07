@@ -1,0 +1,1552 @@
+Compiled from "AbilityData.java"
+public class it.hurts.sskirillss.relics.api.relics.data.AbilityData {
+  private final it.hurts.sskirillss.relics.api.relics.data.AbilitiesData abilitiesData;
+
+  private final java.lang.String ability;
+
+  public it.hurts.sskirillss.relics.api.relics.data.AbilityData(it.hurts.sskirillss.relics.api.relics.data.AbilitiesData, java.lang.String);
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aload_1
+         6: putfield      #7                  // Field abilitiesData:Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         9: aload_0
+        10: aload_2
+        11: putfield      #13                 // Field ability:Ljava/lang/String;
+        14: return
+
+  public it.hurts.sskirillss.relics.api.relics.data.AbilitiesData getAbilitiesData();
+    Code:
+         0: aload_0
+         1: getfield      #7                  // Field abilitiesData:Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: areturn
+
+  public java.lang.String getId();
+    Code:
+         0: aload_0
+         1: getfield      #13                 // Field ability:Ljava/lang/String;
+         4: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.abilities.AbilityTemplate getTemplate();
+    Code:
+         0: aload_0
+         1: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: invokevirtual #21                 // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesTemplate;
+         7: invokevirtual #27                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilitiesTemplate.getAbilities:()Ljava/util/Map;
+        10: aload_0
+        11: invokevirtual #33                 // Method getId:()Ljava/lang/String;
+        14: invokeinterface #37,  2           // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        19: checkcast     #43                 // class it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate
+        22: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.abilities.AbilityComponent getComponent();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnonnull     11
+         9: aconst_null
+        10: areturn
+        11: aload_0
+        12: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        15: invokevirtual #48                 // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent;
+        18: astore_2
+        19: aload_2
+        20: invokevirtual #52                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent.getAbilities:()Ljava/util/Map;
+        23: aload_0
+        24: invokevirtual #33                 // Method getId:()Ljava/lang/String;
+        27: invokeinterface #37,  2           // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        32: checkcast     #55                 // class it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent
+        35: astore_3
+        36: aload_3
+        37: ifnull        42
+        40: aload_3
+        41: areturn
+        42: getstatic     #57                 // Field it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.EMPTY:Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+        45: astore_3
+        46: aload_1
+        47: invokevirtual #61                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getActivation:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate;
+        50: invokevirtual #65                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate.getType:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;
+        53: getstatic     #71                 // Field it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType.TOGGLEABLE:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;
+        56: if_acmpne     84
+        59: aload_3
+        60: invokevirtual #77                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+        63: aload_3
+        64: invokevirtual #81                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.getActivation:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        67: invokevirtual #84                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder;
+        70: iconst_1
+        71: invokevirtual #89                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder.ticking:(Z)Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder;
+        74: invokevirtual #95                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        77: invokevirtual #98                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.activation:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;)Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+        80: invokevirtual #104                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+        83: astore_3
+        84: aload_1
+        85: invokevirtual #107                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getRequiredLevel:()I
+        88: ifgt          129
+        91: aload_1
+        92: invokevirtual #111                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getRequiredRank:()I
+        95: ifgt          129
+        98: aload_3
+        99: invokevirtual #77                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+       102: invokestatic  #114                // Method it/hurts/sskirillss/relics/api/relics/LockComponent.builder:()Lit/hurts/sskirillss/relics/api/relics/LockComponent$LockComponentBuilder;
+       105: new           #120                // class it/hurts/sskirillss/relics/api/relics/data/LockData
+       108: dup
+       109: aload_0
+       110: invokespecial #122                // Method it/hurts/sskirillss/relics/api/relics/data/LockData."<init>":(Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;)V
+       113: invokevirtual #125                // Method it/hurts/sskirillss/relics/api/relics/data/LockData.getMaxUnlocks:()I
+       116: invokevirtual #128                // Method it/hurts/sskirillss/relics/api/relics/LockComponent$LockComponentBuilder.unlocks:(I)Lit/hurts/sskirillss/relics/api/relics/LockComponent$LockComponentBuilder;
+       119: invokevirtual #134                // Method it/hurts/sskirillss/relics/api/relics/LockComponent$LockComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/LockComponent;
+       122: invokevirtual #137                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.lock:(Lit/hurts/sskirillss/relics/api/relics/LockComponent;)Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+       125: invokevirtual #104                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+       128: astore_3
+       129: aload_0
+       130: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+       133: aload_2
+       134: invokevirtual #141                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent$AbilitiesComponentBuilder;
+       137: aload_0
+       138: invokevirtual #33                 // Method getId:()Ljava/lang/String;
+       141: aload_3
+       142: invokevirtual #144                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent$AbilitiesComponentBuilder.ability:(Ljava/lang/String;Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;)Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent$AbilitiesComponentBuilder;
+       145: invokevirtual #149                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent$AbilitiesComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent;
+       148: invokevirtual #151                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.setComponent:(Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent;)V
+       151: aload_3
+       152: areturn
+
+  public void setComponent(it.hurts.sskirillss.relics.api.relics.abilities.AbilityComponent);
+    Code:
+         0: aload_0
+         1: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: aload_0
+         5: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         8: invokevirtual #48                 // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent;
+        11: invokevirtual #141                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent$AbilitiesComponentBuilder;
+        14: aload_0
+        15: invokevirtual #33                 // Method getId:()Ljava/lang/String;
+        18: aload_1
+        19: invokevirtual #144                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent$AbilitiesComponentBuilder.ability:(Ljava/lang/String;Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;)Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent$AbilitiesComponentBuilder;
+        22: invokevirtual #149                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent$AbilitiesComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent;
+        25: invokevirtual #151                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.setComponent:(Lit/hurts/sskirillss/relics/api/relics/abilities/AbilitiesComponent;)V
+        28: return
+
+  public it.hurts.sskirillss.relics.api.relics.data.AbilityStatData getStatData(java.lang.String);
+    Code:
+         0: new           #155                // class it/hurts/sskirillss/relics/api/relics/data/AbilityStatData
+         3: dup
+         4: aload_0
+         5: aload_1
+         6: invokespecial #157                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatData."<init>":(Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;Ljava/lang/String;)V
+         9: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.data.AbilityStatisticData getStatisticData();
+    Code:
+         0: new           #160                // class it/hurts/sskirillss/relics/api/relics/data/AbilityStatisticData
+         3: dup
+         4: aload_0
+         5: invokespecial #162                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatisticData."<init>":(Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;)V
+         8: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.data.ResearchData getResearchData();
+    Code:
+         0: new           #163                // class it/hurts/sskirillss/relics/api/relics/data/ResearchData
+         3: dup
+         4: aload_0
+         5: invokespecial #165                // Method it/hurts/sskirillss/relics/api/relics/data/ResearchData."<init>":(Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;)V
+         8: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.data.AbilityTargetingData getTargetingData();
+    Code:
+         0: new           #166                // class it/hurts/sskirillss/relics/api/relics/data/AbilityTargetingData
+         3: dup
+         4: aload_0
+         5: invokespecial #168                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityTargetingData."<init>":(Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;)V
+         8: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.data.LockData getLockData();
+    Code:
+         0: new           #120                // class it/hurts/sskirillss/relics/api/relics/data/LockData
+         3: dup
+         4: aload_0
+         5: invokespecial #122                // Method it/hurts/sskirillss/relics/api/relics/data/LockData."<init>":(Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;)V
+         8: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.data.AbilityRankModifierData getRankModifierData(java.lang.String);
+    Code:
+         0: new           #169                // class it/hurts/sskirillss/relics/api/relics/data/AbilityRankModifierData
+         3: dup
+         4: aload_0
+         5: aload_1
+         6: invokespecial #171                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityRankModifierData."<init>":(Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;Ljava/lang/String;)V
+         9: areturn
+
+  public int getLevel();
+    Code:
+         0: aload_0
+         1: invokevirtual #172                // Method getComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+         4: invokevirtual #174                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.getPoints:()I
+         7: ireturn
+
+  public void setLevel(int);
+    Code:
+         0: aload_0
+         1: aload_0
+         2: invokevirtual #172                // Method getComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+         5: invokevirtual #77                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+         8: iload_1
+         9: invokevirtual #177                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.points:(I)Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+        12: invokevirtual #104                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+        15: invokevirtual #181                // Method setComponent:(Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;)V
+        18: return
+
+  public void addLevel(int);
+    Code:
+         0: aload_0
+         1: aload_0
+         2: invokevirtual #184                // Method getLevel:()I
+         5: iload_1
+         6: iadd
+         7: invokevirtual #187                // Method setLevel:(I)V
+        10: return
+
+  public java.lang.String getMode();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnonnull     12
+         9: ldc           #191                // String
+        11: areturn
+        12: aload_0
+        13: invokevirtual #172                // Method getComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+        16: invokevirtual #193                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.getMode:()Ljava/lang/String;
+        19: astore_2
+        20: aload_2
+        21: invokevirtual #196                // Method java/lang/String.isEmpty:()Z
+        24: ifeq          42
+        27: aload_1
+        28: invokevirtual #202                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getModes:()Ljava/util/List;
+        31: invokeinterface #206,  1          // InterfaceMethod java/util/List.getFirst:()Ljava/lang/Object;
+        36: checkcast     #197                // class java/lang/String
+        39: goto          43
+        42: aload_2
+        43: areturn
+
+  public void setMode(java.lang.String);
+    Code:
+         0: aload_0
+         1: aload_0
+         2: invokevirtual #172                // Method getComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+         5: invokevirtual #77                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+         8: aload_1
+         9: invokevirtual #212                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.mode:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+        12: invokevirtual #104                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+        15: invokevirtual #181                // Method setComponent:(Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;)V
+        18: return
+
+  public java.lang.String getNextMode();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnonnull     12
+         9: ldc           #191                // String
+        11: areturn
+        12: aload_1
+        13: invokevirtual #202                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getModes:()Ljava/util/List;
+        16: astore_2
+        17: aload_2
+        18: invokeinterface #216,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+        23: ifeq          29
+        26: ldc           #191                // String
+        28: areturn
+        29: aload_0
+        30: invokevirtual #217                // Method getMode:()Ljava/lang/String;
+        33: astore_3
+        34: aload_2
+        35: aload_3
+        36: invokeinterface #218,  2          // InterfaceMethod java/util/List.indexOf:(Ljava/lang/Object;)I
+        41: istore        4
+        43: aload_2
+        44: iload         4
+        46: iflt          62
+        49: iload         4
+        51: aload_2
+        52: invokeinterface #222,  1          // InterfaceMethod java/util/List.size:()I
+        57: iconst_1
+        58: isub
+        59: if_icmplt     66
+        62: iconst_0
+        63: goto          70
+        66: iload         4
+        68: iconst_1
+        69: iadd
+        70: invokeinterface #225,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+        75: checkcast     #197                // class java/lang/String
+        78: areturn
+
+  public boolean cycleMode(net.minecraft.world.entity.player.Player);
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_2
+         5: aload_2
+         6: ifnull        21
+         9: aload_2
+        10: invokevirtual #202                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getModes:()Ljava/util/List;
+        13: invokeinterface #216,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+        18: ifeq          23
+        21: iconst_0
+        22: ireturn
+        23: aload_0
+        24: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        27: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        30: invokevirtual #232                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getStack:()Lnet/minecraft/world/item/ItemStack;
+        33: astore_3
+        34: new           #238                // class it/hurts/sskirillss/relics/api/events/relic/abilities/ability/AbilityModeSwitchEvent
+        37: dup
+        38: aload_1
+        39: aload_3
+        40: aload_0
+        41: invokevirtual #33                 // Method getId:()Ljava/lang/String;
+        44: aload_0
+        45: invokevirtual #217                // Method getMode:()Ljava/lang/String;
+        48: aload_0
+        49: invokevirtual #240                // Method getNextMode:()Ljava/lang/String;
+        52: invokespecial #243                // Method it/hurts/sskirillss/relics/api/events/relic/abilities/ability/AbilityModeSwitchEvent."<init>":(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+        55: astore        4
+        57: getstatic     #246                // Field net/neoforged/neoforge/common/NeoForge.EVENT_BUS:Lnet/neoforged/bus/api/IEventBus;
+        60: aload         4
+        62: invokeinterface #252,  2          // InterfaceMethod net/neoforged/bus/api/IEventBus.post:(Lnet/neoforged/bus/api/Event;)Lnet/neoforged/bus/api/Event;
+        67: pop
+        68: aload         4
+        70: invokevirtual #258                // Method it/hurts/sskirillss/relics/api/events/relic/abilities/ability/AbilityModeSwitchEvent.isCanceled:()Z
+        73: ifeq          78
+        76: iconst_0
+        77: ireturn
+        78: aload_0
+        79: aload         4
+        81: invokevirtual #261                // Method it/hurts/sskirillss/relics/api/events/relic/abilities/ability/AbilityModeSwitchEvent.getToMode:()Ljava/lang/String;
+        84: invokevirtual #264                // Method setMode:(Ljava/lang/String;)V
+        87: iconst_1
+        88: ireturn
+
+  public void randomizeStats();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnonnull     10
+         9: return
+        10: aload_1
+        11: invokevirtual #268                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getStats:()Ljava/util/Map;
+        14: astore_2
+        15: aload_2
+        16: invokeinterface #271,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+        21: ifeq          25
+        24: return
+        25: aload_0
+        26: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        29: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        32: invokevirtual #272                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getEntity:()Lnet/minecraft/world/entity/LivingEntity;
+        35: astore_3
+        36: aload_3
+        37: ifnonnull     46
+        40: invokestatic  #276                // InterfaceMethod net/minecraft/util/RandomSource.create:()Lnet/minecraft/util/RandomSource;
+        43: goto          50
+        46: aload_3
+        47: invokevirtual #282                // Method net/minecraft/world/entity/LivingEntity.getRandom:()Lnet/minecraft/util/RandomSource;
+        50: astore        4
+        52: aload         4
+        54: aload_0
+        55: invokevirtual #287                // Method getMaxQuality:()I
+        58: iconst_1
+        59: iadd
+        60: invokeinterface #290,  2          // InterfaceMethod net/minecraft/util/RandomSource.nextInt:(I)I
+        65: i2d
+        66: dstore        5
+        68: dload         5
+        70: aload_0
+        71: invokevirtual #294                // Method calculateQuality:()I
+        74: i2d
+        75: dcmpl
+        76: ifeq          52
+        79: dconst_0
+        80: dstore        7
+        82: new           #297                // class java/util/HashMap
+        85: dup
+        86: invokespecial #299                // Method java/util/HashMap."<init>":()V
+        89: astore        9
+        91: aload_2
+        92: invokeinterface #300,  1          // InterfaceMethod java/util/Map.keySet:()Ljava/util/Set;
+        97: invokeinterface #304,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+       102: astore        10
+       104: aload         10
+       106: invokeinterface #310,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       111: ifeq          171
+       114: aload         10
+       116: invokeinterface #315,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       121: checkcast     #197                // class java/lang/String
+       124: astore        11
+       126: aload_0
+       127: aload         11
+       129: invokevirtual #318                // Method getStatData:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/api/relics/data/AbilityStatData;
+       132: astore        12
+       134: aload         4
+       136: dconst_0
+       137: aload         12
+       139: invokevirtual #322                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatData.getMaxQuality:()I
+       142: i2d
+       143: invokestatic  #323                // Method it/hurts/sskirillss/relics/utils/MathUtils.randomBetween:(Lnet/minecraft/util/RandomSource;DD)D
+       146: dstore        13
+       148: aload         9
+       150: aload         11
+       152: dload         13
+       154: invokestatic  #329                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+       157: invokevirtual #335                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       160: pop
+       161: dload         7
+       163: dload         13
+       165: dadd
+       166: dstore        7
+       168: goto          104
+       171: dload         7
+       173: aload_2
+       174: invokeinterface #339,  1          // InterfaceMethod java/util/Map.size:()I
+       179: i2d
+       180: ddiv
+       181: dstore        10
+       183: dload         10
+       185: dload         5
+       187: dsub
+       188: invokestatic  #340                // Method java/lang/Math.abs:(D)D
+       191: ldc2_w        #346                // double 0.01d
+       194: dcmpl
+       195: ifle          458
+       198: dload         10
+       200: dload         5
+       202: dcmpg
+       203: ifge          316
+       206: aload         9
+       208: invokevirtual #348                // Method java/util/HashMap.entrySet:()Ljava/util/Set;
+       211: invokeinterface #351,  1          // InterfaceMethod java/util/Set.stream:()Ljava/util/stream/Stream;
+       216: invokestatic  #355                // InterfaceMethod java/util/Map$Entry.comparingByValue:()Ljava/util/Comparator;
+       219: invokeinterface #361,  2          // InterfaceMethod java/util/stream/Stream.min:(Ljava/util/Comparator;)Ljava/util/Optional;
+       224: invokevirtual #367                // Method java/util/Optional.get:()Ljava/lang/Object;
+       227: checkcast     #356                // class java/util/Map$Entry
+       230: invokeinterface #371,  1          // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+       235: checkcast     #197                // class java/lang/String
+       238: astore        12
+       240: aload_0
+       241: aload         12
+       243: invokevirtual #318                // Method getStatData:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/api/relics/data/AbilityStatData;
+       246: astore        13
+       248: dload         5
+       250: dload         10
+       252: dsub
+       253: aload_2
+       254: invokeinterface #339,  1          // InterfaceMethod java/util/Map.size:()I
+       259: i2d
+       260: dmul
+       261: aload         13
+       263: invokevirtual #322                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatData.getMaxQuality:()I
+       266: i2d
+       267: aload         9
+       269: aload         12
+       271: invokevirtual #374                // Method java/util/HashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       274: checkcast     #330                // class java/lang/Double
+       277: invokevirtual #375                // Method java/lang/Double.doubleValue:()D
+       280: dsub
+       281: invokestatic  #379                // Method java/lang/Math.min:(DD)D
+       284: dstore        14
+       286: aload         9
+       288: aload         12
+       290: aload         9
+       292: aload         12
+       294: invokevirtual #374                // Method java/util/HashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       297: checkcast     #330                // class java/lang/Double
+       300: invokevirtual #375                // Method java/lang/Double.doubleValue:()D
+       303: dload         14
+       305: dadd
+       306: invokestatic  #329                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+       309: invokevirtual #335                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       312: pop
+       313: goto          416
+       316: dload         10
+       318: dload         5
+       320: dcmpl
+       321: ifle          416
+       324: aload         9
+       326: invokevirtual #348                // Method java/util/HashMap.entrySet:()Ljava/util/Set;
+       329: invokeinterface #351,  1          // InterfaceMethod java/util/Set.stream:()Ljava/util/stream/Stream;
+       334: invokestatic  #355                // InterfaceMethod java/util/Map$Entry.comparingByValue:()Ljava/util/Comparator;
+       337: invokeinterface #382,  2          // InterfaceMethod java/util/stream/Stream.max:(Ljava/util/Comparator;)Ljava/util/Optional;
+       342: invokevirtual #367                // Method java/util/Optional.get:()Ljava/lang/Object;
+       345: checkcast     #356                // class java/util/Map$Entry
+       348: invokeinterface #371,  1          // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+       353: checkcast     #197                // class java/lang/String
+       356: astore        12
+       358: dload         10
+       360: dload         5
+       362: dsub
+       363: aload_2
+       364: invokeinterface #339,  1          // InterfaceMethod java/util/Map.size:()I
+       369: i2d
+       370: dmul
+       371: aload         9
+       373: aload         12
+       375: invokevirtual #374                // Method java/util/HashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       378: checkcast     #330                // class java/lang/Double
+       381: invokevirtual #375                // Method java/lang/Double.doubleValue:()D
+       384: invokestatic  #379                // Method java/lang/Math.min:(DD)D
+       387: dstore        13
+       389: aload         9
+       391: aload         12
+       393: aload         9
+       395: aload         12
+       397: invokevirtual #374                // Method java/util/HashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       400: checkcast     #330                // class java/lang/Double
+       403: invokevirtual #375                // Method java/lang/Double.doubleValue:()D
+       406: dload         13
+       408: dsub
+       409: invokestatic  #329                // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+       412: invokevirtual #335                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       415: pop
+       416: aload         9
+       418: invokevirtual #385                // Method java/util/HashMap.values:()Ljava/util/Collection;
+       421: invokeinterface #389,  1          // InterfaceMethod java/util/Collection.stream:()Ljava/util/stream/Stream;
+       426: invokedynamic #392,  0            // InvokeDynamic #0:applyAsDouble:()Ljava/util/function/ToDoubleFunction;
+       431: invokeinterface #396,  2          // InterfaceMethod java/util/stream/Stream.mapToDouble:(Ljava/util/function/ToDoubleFunction;)Ljava/util/stream/DoubleStream;
+       436: invokeinterface #400,  1          // InterfaceMethod java/util/stream/DoubleStream.sum:()D
+       441: dstore        7
+       443: dload         7
+       445: aload_2
+       446: invokeinterface #339,  1          // InterfaceMethod java/util/Map.size:()I
+       451: i2d
+       452: ddiv
+       453: dstore        10
+       455: goto          183
+       458: aload         9
+       460: invokevirtual #348                // Method java/util/HashMap.entrySet:()Ljava/util/Set;
+       463: invokeinterface #304,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+       468: astore        12
+       470: aload         12
+       472: invokeinterface #310,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       477: ifeq          554
+       480: aload         12
+       482: invokeinterface #315,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       487: checkcast     #356                // class java/util/Map$Entry
+       490: astore        13
+       492: aload         13
+       494: invokeinterface #371,  1          // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+       499: checkcast     #197                // class java/lang/String
+       502: astore        14
+       504: aload_0
+       505: aload         14
+       507: invokevirtual #318                // Method getStatData:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/api/relics/data/AbilityStatData;
+       510: astore        15
+       512: aload         15
+       514: invokevirtual #405                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatData.getOverrideValue:()Ljava/util/Optional;
+       517: invokevirtual #409                // Method java/util/Optional.isPresent:()Z
+       520: ifeq          529
+       523: aload         15
+       525: aconst_null
+       526: invokevirtual #412                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatData.setOverrideValue:(Ljava/lang/Double;)V
+       529: aload         15
+       531: aload         13
+       533: invokeinterface #416,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+       538: checkcast     #330                // class java/lang/Double
+       541: invokevirtual #375                // Method java/lang/Double.doubleValue:()D
+       544: invokestatic  #419                // Method java/lang/Math.round:(D)J
+       547: l2i
+       548: invokevirtual #423                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatData.setInitialQuality:(I)V
+       551: goto          470
+       554: return
+
+  public void randomizeStat(java.lang.String);
+    Code:
+         0: aload_0
+         1: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+         7: invokevirtual #272                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getEntity:()Lnet/minecraft/world/entity/LivingEntity;
+        10: astore_2
+        11: aload_2
+        12: ifnonnull     21
+        15: invokestatic  #276                // InterfaceMethod net/minecraft/util/RandomSource.create:()Lnet/minecraft/util/RandomSource;
+        18: goto          25
+        21: aload_2
+        22: invokevirtual #282                // Method net/minecraft/world/entity/LivingEntity.getRandom:()Lnet/minecraft/util/RandomSource;
+        25: astore_3
+        26: aload_0
+        27: aload_1
+        28: invokevirtual #318                // Method getStatData:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/api/relics/data/AbilityStatData;
+        31: aload_3
+        32: aload_0
+        33: aload_1
+        34: invokevirtual #318                // Method getStatData:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/api/relics/data/AbilityStatData;
+        37: invokevirtual #322                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatData.getMaxQuality:()I
+        40: iconst_1
+        41: iadd
+        42: invokeinterface #290,  2          // InterfaceMethod net/minecraft/util/RandomSource.nextInt:(I)I
+        47: invokevirtual #423                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatData.setInitialQuality:(I)V
+        50: return
+
+  public boolean isEnoughLevel();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnull        33
+         9: aload_0
+        10: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        13: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        16: invokevirtual #426                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getLevelingData:()Lit/hurts/sskirillss/relics/api/relics/data/LevelingData;
+        19: invokevirtual #430                // Method it/hurts/sskirillss/relics/api/relics/data/LevelingData.getLevel:()I
+        22: aload_1
+        23: invokevirtual #107                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getRequiredLevel:()I
+        26: if_icmplt     33
+        29: iconst_1
+        30: goto          34
+        33: iconst_0
+        34: ireturn
+
+  public boolean isEnoughRank();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnull        33
+         9: aload_0
+        10: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        13: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        16: invokevirtual #426                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getLevelingData:()Lit/hurts/sskirillss/relics/api/relics/data/LevelingData;
+        19: invokevirtual #433                // Method it/hurts/sskirillss/relics/api/relics/data/LevelingData.getRank:()I
+        22: aload_1
+        23: invokevirtual #111                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getRequiredRank:()I
+        26: if_icmplt     33
+        29: iconst_1
+        30: goto          34
+        33: iconst_0
+        34: ireturn
+
+  public boolean isEnabled();
+    Code:
+         0: iconst_1
+         1: ireturn
+
+  public boolean isUnlocked();
+    Code:
+         0: aload_0
+         1: invokevirtual #436                // Method isEnabled:()Z
+         4: ifeq          38
+         7: aload_0
+         8: invokevirtual #439                // Method isEnoughLevel:()Z
+        11: ifeq          38
+        14: aload_0
+        15: invokevirtual #442                // Method getLockData:()Lit/hurts/sskirillss/relics/api/relics/data/LockData;
+        18: invokevirtual #446                // Method it/hurts/sskirillss/relics/api/relics/data/LockData.isUnlocked:()Z
+        21: ifeq          38
+        24: aload_0
+        25: invokevirtual #449                // Method getResearchData:()Lit/hurts/sskirillss/relics/api/relics/data/ResearchData;
+        28: invokevirtual #453                // Method it/hurts/sskirillss/relics/api/relics/data/ResearchData.isResearched:()Z
+        31: ifeq          38
+        34: iconst_1
+        35: goto          39
+        38: iconst_0
+        39: ireturn
+
+  public boolean canPlayerUse(net.minecraft.world.entity.LivingEntity);
+    Code:
+         0: aload_0
+         1: invokevirtual #456                // Method isUnlocked:()Z
+         4: ireturn
+
+  public boolean isActive();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnull        23
+         9: aload_1
+        10: invokevirtual #61                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getActivation:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate;
+        13: invokevirtual #457                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate.isActive:()Z
+        16: ifeq          23
+        19: iconst_1
+        20: goto          24
+        23: iconst_0
+        24: ireturn
+
+  public it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationType getActivationType();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnonnull     15
+         9: getstatic     #460                // Field it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType.NONE:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;
+        12: goto          22
+        15: aload_1
+        16: invokevirtual #61                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getActivation:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate;
+        19: invokevirtual #65                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate.getType:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;
+        22: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationComponent getActivationComponent();
+    Code:
+         0: aload_0
+         1: invokevirtual #172                // Method getComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+         4: astore_1
+         5: aload_1
+         6: ifnonnull     15
+         9: getstatic     #463                // Field it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.EMPTY:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        12: goto          19
+        15: aload_1
+        16: invokevirtual #81                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.getActivation:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        19: areturn
+
+  public void setActivationComponent(it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationComponent);
+    Code:
+         0: aload_0
+         1: aload_0
+         2: invokevirtual #172                // Method getComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+         5: invokevirtual #77                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+         8: aload_1
+         9: invokevirtual #98                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.activation:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;)Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder;
+        12: invokevirtual #104                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent$AbilityComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;
+        15: invokevirtual #181                // Method setComponent:(Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityComponent;)V
+        18: return
+
+  public int getActivationCooldown();
+    Code:
+         0: aload_0
+         1: invokevirtual #466                // Method getActivationComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+         4: invokevirtual #469                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.getCooldown:()I
+         7: ireturn
+
+  public void setActivationCooldown(int);
+    Code:
+         0: iconst_0
+         1: iload_1
+         2: invokestatic  #472                // Method java/lang/Math.max:(II)I
+         5: istore_2
+         6: aload_0
+         7: aload_0
+         8: invokevirtual #466                // Method getActivationComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        11: invokevirtual #84                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder;
+        14: iload_2
+        15: invokevirtual #475                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder.cooldown:(I)Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder;
+        18: aload_0
+        19: invokevirtual #466                // Method getActivationComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        22: invokevirtual #479                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.getCooldownCap:()I
+        25: iload_2
+        26: invokestatic  #472                // Method java/lang/Math.max:(II)I
+        29: invokevirtual #482                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder.cooldownCap:(I)Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder;
+        32: invokevirtual #95                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        35: invokevirtual #485                // Method setActivationComponent:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;)V
+        38: return
+
+  public void addActivationCooldown(int);
+    Code:
+         0: aload_0
+         1: aload_0
+         2: invokevirtual #489                // Method getActivationCooldown:()I
+         5: iload_1
+         6: iadd
+         7: invokevirtual #492                // Method setActivationCooldown:(I)V
+        10: return
+
+  public int getActivationCooldownCap();
+    Code:
+         0: aload_0
+         1: invokevirtual #466                // Method getActivationComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+         4: invokevirtual #479                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.getCooldownCap:()I
+         7: ireturn
+
+  public boolean isActivationOnCooldown();
+    Code:
+         0: aload_0
+         1: invokevirtual #489                // Method getActivationCooldown:()I
+         4: ifle          11
+         7: iconst_1
+         8: goto          12
+        11: iconst_0
+        12: ireturn
+
+  public boolean isActivationTicking();
+    Code:
+         0: aload_0
+         1: invokevirtual #456                // Method isUnlocked:()Z
+         4: ifeq          21
+         7: aload_0
+         8: invokevirtual #466                // Method getActivationComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        11: invokevirtual #495                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.isTicking:()Z
+        14: ifeq          21
+        17: iconst_1
+        18: goto          22
+        21: iconst_0
+        22: ireturn
+
+  public void setActivationTicking(boolean);
+    Code:
+         0: aload_0
+         1: aload_0
+         2: invokevirtual #466                // Method getActivationComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+         5: invokevirtual #84                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder;
+         8: iload_1
+         9: invokevirtual #89                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder.ticking:(Z)Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder;
+        12: invokevirtual #95                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        15: invokevirtual #485                // Method setActivationComponent:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;)V
+        18: return
+
+  public int getActivationCharge();
+    Code:
+         0: aload_0
+         1: invokevirtual #466                // Method getActivationComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+         4: invokevirtual #498                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.getCharge:()I
+         7: ireturn
+
+  public void setActivationCharge(int);
+    Code:
+         0: aload_0
+         1: aload_0
+         2: invokevirtual #466                // Method getActivationComponent:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+         5: invokevirtual #84                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent.toBuilder:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder;
+         8: iconst_0
+         9: iload_1
+        10: invokestatic  #472                // Method java/lang/Math.max:(II)I
+        13: invokevirtual #501                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder.charge:(I)Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder;
+        16: invokevirtual #95                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent$AbilityActivationComponentBuilder.build:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;
+        19: invokevirtual #485                // Method setActivationComponent:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationComponent;)V
+        22: return
+
+  public boolean testActivationPredicate(net.minecraft.world.entity.player.Player, java.lang.String);
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_3
+         5: aload_3
+         6: ifnonnull     11
+         9: iconst_0
+        10: ireturn
+        11: aload_3
+        12: invokevirtual #61                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getActivation:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate;
+        15: invokevirtual #504                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate.getPredicates:()Ljava/util/Map;
+        18: aload_2
+        19: invokeinterface #37,  2           // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        24: checkcast     #507                // class it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateTemplate
+        27: astore        4
+        29: aload         4
+        31: ifnull        65
+        34: aload         4
+        36: new           #509                // class it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateContext
+        39: dup
+        40: aload_1
+        41: aload_0
+        42: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        45: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        48: invokevirtual #232                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getStack:()Lnet/minecraft/world/item/ItemStack;
+        51: aload_0
+        52: invokespecial #511                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;)V
+        55: invokevirtual #514                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateTemplate.test:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateContext;)Z
+        58: ifeq          65
+        61: iconst_1
+        62: goto          66
+        65: iconst_0
+        66: ireturn
+
+  public boolean testActivationPredicates(net.minecraft.world.entity.player.Player, it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationPredicateType);
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_3
+         5: aload_3
+         6: ifnonnull     11
+         9: iconst_0
+        10: ireturn
+        11: new           #509                // class it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateContext
+        14: dup
+        15: aload_1
+        16: aload_0
+        17: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        20: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        23: invokevirtual #232                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getStack:()Lnet/minecraft/world/item/ItemStack;
+        26: aload_0
+        27: invokespecial #511                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;)V
+        30: astore        4
+        32: aload_3
+        33: invokevirtual #61                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getActivation:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate;
+        36: aload_2
+        37: invokevirtual #518                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate.getPredicates:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateType;)Ljava/util/Map;
+        40: invokeinterface #521,  1          // InterfaceMethod java/util/Map.values:()Ljava/util/Collection;
+        45: invokeinterface #522,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+        50: astore        5
+        52: aload         5
+        54: invokeinterface #310,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        59: ifeq          89
+        62: aload         5
+        64: invokeinterface #315,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        69: checkcast     #507                // class it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateTemplate
+        72: astore        6
+        74: aload         6
+        76: aload         4
+        78: invokevirtual #514                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateTemplate.test:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateContext;)Z
+        81: ifne          86
+        84: iconst_0
+        85: ireturn
+        86: goto          52
+        89: iconst_1
+        90: ireturn
+
+  public boolean canPlayerActivate(net.minecraft.world.entity.player.Player);
+    Code:
+         0: aload_0
+         1: invokevirtual #523                // Method isActive:()Z
+         4: ifeq          37
+         7: aload_0
+         8: aload_1
+         9: invokevirtual #524                // Method canPlayerUse:(Lnet/minecraft/world/entity/LivingEntity;)Z
+        12: ifeq          37
+        15: aload_0
+        16: invokevirtual #528                // Method isActivationOnCooldown:()Z
+        19: ifne          37
+        22: aload_0
+        23: aload_1
+        24: getstatic     #531                // Field it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateType.CAST:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateType;
+        27: invokevirtual #537                // Method testActivationPredicates:(Lnet/minecraft/world/entity/player/Player;Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationPredicateType;)Z
+        30: ifeq          37
+        33: iconst_1
+        34: goto          38
+        37: iconst_0
+        38: ireturn
+
+  public boolean activate(net.minecraft.world.entity.player.Player, it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationStage);
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_3
+         5: aload_3
+         6: ifnull        19
+         9: aload_3
+        10: invokevirtual #61                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getActivation:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate;
+        13: invokevirtual #457                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate.isActive:()Z
+        16: ifne          21
+        19: iconst_0
+        20: ireturn
+        21: aload_3
+        22: invokevirtual #61                 // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getActivation:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate;
+        25: invokevirtual #65                 // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationTemplate.getType:()Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;
+        28: astore        4
+        30: aload_0
+        31: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        34: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        37: invokevirtual #232                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getStack:()Lnet/minecraft/world/item/ItemStack;
+        40: astore        5
+        42: aload         5
+        44: invokevirtual #541                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+        47: astore        7
+        49: aload         7
+        51: instanceof    #547                // class it/hurts/sskirillss/relics/api/relics/IRelicItem
+        54: ifeq          67
+        57: aload         7
+        59: checkcast     #547                // class it/hurts/sskirillss/relics/api/relics/IRelicItem
+        62: astore        6
+        64: goto          69
+        67: iconst_0
+        68: ireturn
+        69: aload_0
+        70: aload_1
+        71: invokevirtual #549                // Method canPlayerActivate:(Lnet/minecraft/world/entity/player/Player;)Z
+        74: ifne          114
+        77: aload_0
+        78: invokevirtual #553                // Method isActivationTicking:()Z
+        81: ifeq          112
+        84: aload_0
+        85: iconst_0
+        86: invokevirtual #556                // Method setActivationTicking:(Z)V
+        89: aload         6
+        91: new           #560                // class it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationContext
+        94: dup
+        95: aload_1
+        96: aload         5
+        98: aload_0
+        99: aload         4
+       101: getstatic     #562                // Field it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage.END:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage;
+       104: invokespecial #568                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage;)V
+       107: invokeinterface #571,  2          // InterfaceMethod it/hurts/sskirillss/relics/api/relics/IRelicItem.activateAbility:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationContext;)V
+       112: iconst_0
+       113: ireturn
+       114: getstatic     #575                // Field it/hurts/sskirillss/relics/api/relics/data/AbilityData$1.$SwitchMap$it$hurts$sskirillss$relics$api$relics$abilities$activation$AbilityActivationType:[I
+       117: aload         4
+       119: invokevirtual #581                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType.ordinal:()I
+       122: iaload
+       123: lookupswitch  { // 2
+
+                       1: 148
+
+                       2: 148
+                 default: 197
+            }
+       148: getstatic     #584                // Field it/hurts/sskirillss/relics/api/relics/data/AbilityData$1.$SwitchMap$it$hurts$sskirillss$relics$api$relics$abilities$activation$AbilityActivationStage:[I
+       151: aload_2
+       152: invokevirtual #587                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage.ordinal:()I
+       155: iaload
+       156: lookupswitch  { // 2
+
+                       1: 184
+
+                       2: 192
+                 default: 197
+            }
+       184: aload_0
+       185: iconst_1
+       186: invokevirtual #556                // Method setActivationTicking:(Z)V
+       189: goto          197
+       192: aload_0
+       193: iconst_0
+       194: invokevirtual #556                // Method setActivationTicking:(Z)V
+       197: aload_2
+       198: getstatic     #588                // Field it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage.START:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage;
+       201: if_acmpne     218
+       204: aload         4
+       206: getstatic     #591                // Field it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType.CYCLE_MODE:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;
+       209: if_acmpne     218
+       212: aload_0
+       213: aload_1
+       214: invokevirtual #594                // Method cycleMode:(Lnet/minecraft/world/entity/player/Player;)Z
+       217: pop
+       218: aload         6
+       220: new           #560                // class it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationContext
+       223: dup
+       224: aload_1
+       225: aload         5
+       227: aload_0
+       228: aload         4
+       230: aload_2
+       231: invokespecial #568                // Method it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationContext."<init>":(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage;)V
+       234: invokeinterface #571,  2          // InterfaceMethod it/hurts/sskirillss/relics/api/relics/IRelicItem.activateAbility:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationContext;)V
+       239: iconst_1
+       240: ireturn
+
+  public boolean activate(net.minecraft.world.entity.player.Player);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: getstatic     #588                // Field it/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage.START:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage;
+         5: invokevirtual #597                // Method activate:(Lnet/minecraft/world/entity/player/Player;Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage;)Z
+         8: ireturn
+
+  public boolean mayUnlock();
+    Code:
+         0: aload_0
+         1: invokevirtual #439                // Method isEnoughLevel:()Z
+         4: ifeq          21
+         7: aload_0
+         8: invokevirtual #442                // Method getLockData:()Lit/hurts/sskirillss/relics/api/relics/data/LockData;
+        11: invokevirtual #446                // Method it/hurts/sskirillss/relics/api/relics/data/LockData.isUnlocked:()Z
+        14: ifne          21
+        17: iconst_1
+        18: goto          22
+        21: iconst_0
+        22: ireturn
+
+  public boolean mayResearch();
+    Code:
+         0: aload_0
+         1: invokevirtual #439                // Method isEnoughLevel:()Z
+         4: ifeq          31
+         7: aload_0
+         8: invokevirtual #442                // Method getLockData:()Lit/hurts/sskirillss/relics/api/relics/data/LockData;
+        11: invokevirtual #446                // Method it/hurts/sskirillss/relics/api/relics/data/LockData.isUnlocked:()Z
+        14: ifeq          31
+        17: aload_0
+        18: invokevirtual #449                // Method getResearchData:()Lit/hurts/sskirillss/relics/api/relics/data/ResearchData;
+        21: invokevirtual #453                // Method it/hurts/sskirillss/relics/api/relics/data/ResearchData.isResearched:()Z
+        24: ifne          31
+        27: iconst_1
+        28: goto          32
+        31: iconst_0
+        32: ireturn
+
+  public int getUpgradePlayerExperienceCost();
+    Code:
+         0: aload_0
+         1: invokevirtual #184                // Method getLevel:()I
+         4: iconst_1
+         5: iadd
+         6: bipush        50
+         8: imul
+         9: ireturn
+
+  public boolean canBeUpgraded();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: invokevirtual #601                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getInitialMaxLevel:()I
+         9: ifle          28
+        12: aload_1
+        13: invokevirtual #268                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getStats:()Ljava/util/Map;
+        16: invokeinterface #271,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+        21: ifne          28
+        24: iconst_1
+        25: goto          29
+        28: iconst_0
+        29: ireturn
+
+  public boolean mayUpgrade();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnull        66
+         9: aload_1
+        10: invokevirtual #601                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getInitialMaxLevel:()I
+        13: ifle          66
+        16: aload_1
+        17: invokevirtual #268                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getStats:()Ljava/util/Map;
+        20: invokeinterface #271,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+        25: ifne          66
+        28: aload_0
+        29: invokevirtual #604                // Method isMaxLevel:()Z
+        32: ifne          66
+        35: aload_0
+        36: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        39: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        42: invokevirtual #426                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getLevelingData:()Lit/hurts/sskirillss/relics/api/relics/data/LevelingData;
+        45: invokevirtual #607                // Method it/hurts/sskirillss/relics/api/relics/data/LevelingData.getPoints:()I
+        48: aload_1
+        49: invokevirtual #608                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getRequiredPoints:()I
+        52: if_icmplt     66
+        55: aload_0
+        56: invokevirtual #456                // Method isUnlocked:()Z
+        59: ifeq          66
+        62: iconst_1
+        63: goto          67
+        66: iconst_0
+        67: ireturn
+
+  public boolean mayPlayerUpgrade();
+    Code:
+         0: aload_0
+         1: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+         7: invokevirtual #272                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getEntity:()Lnet/minecraft/world/entity/LivingEntity;
+        10: astore_1
+        11: aload_1
+        12: instanceof    #611                // class net/minecraft/world/entity/player/Player
+        15: ifeq          26
+        18: aload_1
+        19: checkcast     #611                // class net/minecraft/world/entity/player/Player
+        22: astore_2
+        23: goto          28
+        26: iconst_0
+        27: ireturn
+        28: aload_0
+        29: invokevirtual #613                // Method mayUpgrade:()Z
+        32: ifeq          52
+        35: aload_2
+        36: invokestatic  #616                // Method it/hurts/sskirillss/relics/utils/EntityUtils.getPlayerTotalExperience:(Lnet/minecraft/world/entity/player/Player;)J
+        39: aload_0
+        40: invokevirtual #622                // Method getUpgradePlayerExperienceCost:()I
+        43: i2l
+        44: lcmp
+        45: iflt          52
+        48: iconst_1
+        49: goto          53
+        52: iconst_0
+        53: ireturn
+
+  public boolean upgrade();
+    Code:
+         0: aload_0
+         1: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+         7: invokevirtual #272                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getEntity:()Lnet/minecraft/world/entity/LivingEntity;
+        10: astore_1
+        11: aload_1
+        12: instanceof    #611                // class net/minecraft/world/entity/player/Player
+        15: ifeq          30
+        18: aload_1
+        19: checkcast     #611                // class net/minecraft/world/entity/player/Player
+        22: astore_2
+        23: aload_0
+        24: invokevirtual #625                // Method mayPlayerUpgrade:()Z
+        27: ifne          32
+        30: iconst_0
+        31: ireturn
+        32: aload_2
+        33: aload_0
+        34: invokevirtual #622                // Method getUpgradePlayerExperienceCost:()I
+        37: ineg
+        38: invokevirtual #628                // Method net/minecraft/world/entity/player/Player.giveExperiencePoints:(I)V
+        41: aload_0
+        42: aload_0
+        43: invokevirtual #184                // Method getLevel:()I
+        46: iconst_1
+        47: iadd
+        48: invokevirtual #187                // Method setLevel:(I)V
+        51: aload_0
+        52: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        55: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        58: invokevirtual #426                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getLevelingData:()Lit/hurts/sskirillss/relics/api/relics/data/LevelingData;
+        61: aload_0
+        62: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+        65: invokevirtual #608                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getRequiredPoints:()I
+        68: ineg
+        69: invokevirtual #631                // Method it/hurts/sskirillss/relics/api/relics/data/LevelingData.addPoints:(I)Z
+        72: pop
+        73: iconst_1
+        74: ireturn
+
+  public int getRerollPlayerExperienceCost();
+    Code:
+         0: sipush        150
+         3: ireturn
+
+  public boolean mayReroll();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnull        32
+         9: aload_1
+        10: invokevirtual #268                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getStats:()Ljava/util/Map;
+        13: invokeinterface #271,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+        18: ifne          32
+        21: aload_0
+        22: invokevirtual #456                // Method isUnlocked:()Z
+        25: ifeq          32
+        28: iconst_1
+        29: goto          33
+        32: iconst_0
+        33: ireturn
+
+  public boolean mayPlayerReroll();
+    Code:
+         0: aload_0
+         1: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+         7: invokevirtual #272                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getEntity:()Lnet/minecraft/world/entity/LivingEntity;
+        10: astore_1
+        11: aload_1
+        12: instanceof    #611                // class net/minecraft/world/entity/player/Player
+        15: ifeq          26
+        18: aload_1
+        19: checkcast     #611                // class net/minecraft/world/entity/player/Player
+        22: astore_2
+        23: goto          28
+        26: iconst_0
+        27: ireturn
+        28: aload_0
+        29: invokevirtual #635                // Method mayReroll:()Z
+        32: ifeq          52
+        35: aload_2
+        36: invokestatic  #616                // Method it/hurts/sskirillss/relics/utils/EntityUtils.getPlayerTotalExperience:(Lnet/minecraft/world/entity/player/Player;)J
+        39: aload_0
+        40: invokevirtual #638                // Method getRerollPlayerExperienceCost:()I
+        43: i2l
+        44: lcmp
+        45: iflt          52
+        48: iconst_1
+        49: goto          53
+        52: iconst_0
+        53: ireturn
+
+  public boolean reroll();
+    Code:
+         0: aload_0
+         1: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+         7: invokevirtual #272                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getEntity:()Lnet/minecraft/world/entity/LivingEntity;
+        10: astore_1
+        11: aload_1
+        12: instanceof    #611                // class net/minecraft/world/entity/player/Player
+        15: ifeq          30
+        18: aload_1
+        19: checkcast     #611                // class net/minecraft/world/entity/player/Player
+        22: astore_2
+        23: aload_0
+        24: invokevirtual #641                // Method mayPlayerReroll:()Z
+        27: ifne          32
+        30: iconst_0
+        31: ireturn
+        32: aload_2
+        33: aload_0
+        34: invokevirtual #638                // Method getRerollPlayerExperienceCost:()I
+        37: ineg
+        38: invokevirtual #628                // Method net/minecraft/world/entity/player/Player.giveExperiencePoints:(I)V
+        41: aload_0
+        42: invokevirtual #644                // Method randomizeStats:()V
+        45: iconst_1
+        46: ireturn
+
+  public int getResetPlayerExperienceCost();
+    Code:
+         0: aload_0
+         1: invokevirtual #184                // Method getLevel:()I
+         4: sipush        250
+         7: imul
+         8: ireturn
+
+  public boolean mayReset();
+    Code:
+         0: aload_0
+         1: invokevirtual #184                // Method getLevel:()I
+         4: ifle          18
+         7: aload_0
+         8: invokevirtual #456                // Method isUnlocked:()Z
+        11: ifeq          18
+        14: iconst_1
+        15: goto          19
+        18: iconst_0
+        19: ireturn
+
+  public boolean mayPlayerReset();
+    Code:
+         0: aload_0
+         1: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+         7: invokevirtual #272                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getEntity:()Lnet/minecraft/world/entity/LivingEntity;
+        10: astore_1
+        11: aload_1
+        12: instanceof    #611                // class net/minecraft/world/entity/player/Player
+        15: ifeq          26
+        18: aload_1
+        19: checkcast     #611                // class net/minecraft/world/entity/player/Player
+        22: astore_2
+        23: goto          28
+        26: iconst_0
+        27: ireturn
+        28: aload_0
+        29: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+        32: astore_3
+        33: aload_3
+        34: ifnull        73
+        37: aload_3
+        38: invokevirtual #268                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getStats:()Ljava/util/Map;
+        41: invokeinterface #271,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+        46: ifne          73
+        49: aload_0
+        50: invokevirtual #647                // Method mayReset:()Z
+        53: ifeq          73
+        56: aload_2
+        57: invokestatic  #616                // Method it/hurts/sskirillss/relics/utils/EntityUtils.getPlayerTotalExperience:(Lnet/minecraft/world/entity/player/Player;)J
+        60: aload_0
+        61: invokevirtual #650                // Method getResetPlayerExperienceCost:()I
+        64: i2l
+        65: lcmp
+        66: iflt          73
+        69: iconst_1
+        70: goto          74
+        73: iconst_0
+        74: ireturn
+
+  public boolean reset();
+    Code:
+         0: aload_0
+         1: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+         4: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+         7: invokevirtual #272                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getEntity:()Lnet/minecraft/world/entity/LivingEntity;
+        10: astore_1
+        11: aload_1
+        12: instanceof    #611                // class net/minecraft/world/entity/player/Player
+        15: ifeq          30
+        18: aload_1
+        19: checkcast     #611                // class net/minecraft/world/entity/player/Player
+        22: astore_2
+        23: aload_0
+        24: invokevirtual #653                // Method mayPlayerReset:()Z
+        27: ifne          32
+        30: iconst_0
+        31: ireturn
+        32: aload_2
+        33: aload_0
+        34: invokevirtual #650                // Method getResetPlayerExperienceCost:()I
+        37: ineg
+        38: invokevirtual #628                // Method net/minecraft/world/entity/player/Player.giveExperiencePoints:(I)V
+        41: aload_0
+        42: invokevirtual #17                 // Method getAbilitiesData:()Lit/hurts/sskirillss/relics/api/relics/data/AbilitiesData;
+        45: invokevirtual #228                // Method it/hurts/sskirillss/relics/api/relics/data/AbilitiesData.getRelicData:()Lit/hurts/sskirillss/relics/api/relics/data/RelicData;
+        48: invokevirtual #426                // Method it/hurts/sskirillss/relics/api/relics/data/RelicData.getLevelingData:()Lit/hurts/sskirillss/relics/api/relics/data/LevelingData;
+        51: aload_0
+        52: invokevirtual #184                // Method getLevel:()I
+        55: aload_0
+        56: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+        59: invokevirtual #608                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getRequiredPoints:()I
+        62: imul
+        63: invokevirtual #631                // Method it/hurts/sskirillss/relics/api/relics/data/LevelingData.addPoints:(I)Z
+        66: pop
+        67: aload_0
+        68: iconst_0
+        69: invokevirtual #187                // Method setLevel:(I)V
+        72: iconst_1
+        73: ireturn
+
+  public int getMaxQuality();
+    Code:
+         0: bipush        10
+         2: ireturn
+
+  public int calculateQuality();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnonnull     11
+         9: iconst_0
+        10: ireturn
+        11: aload_1
+        12: invokevirtual #268                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getStats:()Ljava/util/Map;
+        15: astore_2
+        16: aload_2
+        17: invokeinterface #271,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+        22: ifeq          30
+        25: aload_0
+        26: invokevirtual #287                // Method getMaxQuality:()I
+        29: ireturn
+        30: aload_2
+        31: invokeinterface #300,  1          // InterfaceMethod java/util/Map.keySet:()Ljava/util/Set;
+        36: invokeinterface #351,  1          // InterfaceMethod java/util/Set.stream:()Ljava/util/stream/Stream;
+        41: aload_0
+        42: invokedynamic #656,  0            // InvokeDynamic #1:applyAsInt:(Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;)Ljava/util/function/ToIntFunction;
+        47: invokeinterface #660,  2          // InterfaceMethod java/util/stream/Stream.mapToInt:(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+        52: invokeinterface #664,  1          // InterfaceMethod java/util/stream/IntStream.average:()Ljava/util/OptionalDouble;
+        57: dconst_0
+        58: invokevirtual #670                // Method java/util/OptionalDouble.orElse:(D)D
+        61: dstore_3
+        62: iconst_0
+        63: istore        5
+        65: aload_0
+        66: invokevirtual #287                // Method getMaxQuality:()I
+        69: istore        6
+        71: dload_3
+        72: iload         5
+        74: i2d
+        75: dcmpl
+        76: ifne          82
+        79: iload         5
+        81: ireturn
+        82: dload_3
+        83: iload         6
+        85: i2d
+        86: dcmpl
+        87: ifne          93
+        90: iload         6
+        92: ireturn
+        93: dload_3
+        94: invokestatic  #675                // Method java/lang/Math.floor:(D)D
+        97: iload         5
+        99: iconst_1
+       100: iadd
+       101: i2d
+       102: iload         6
+       104: iconst_1
+       105: isub
+       106: i2d
+       107: invokestatic  #678                // Method net/minecraft/util/Mth.clamp:(DDD)D
+       110: d2i
+       111: ireturn
+
+  public boolean isMaxLevel();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnull        24
+         9: aload_0
+        10: invokevirtual #184                // Method getLevel:()I
+        13: aload_1
+        14: invokevirtual #601                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getInitialMaxLevel:()I
+        17: if_icmplt     24
+        20: iconst_1
+        21: goto          25
+        24: iconst_0
+        25: ireturn
+
+  public boolean isMaxQuality();
+    Code:
+         0: aload_0
+         1: invokevirtual #294                // Method calculateQuality:()I
+         4: aload_0
+         5: invokevirtual #287                // Method getMaxQuality:()I
+         8: if_icmplt     15
+        11: iconst_1
+        12: goto          16
+        15: iconst_0
+        16: ireturn
+
+  public boolean isUpgradeEnabled();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnull        32
+         9: aload_0
+        10: invokevirtual #456                // Method isUnlocked:()Z
+        13: ifeq          32
+        16: aload_1
+        17: invokevirtual #268                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getStats:()Ljava/util/Map;
+        20: invokeinterface #271,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+        25: ifne          32
+        28: iconst_1
+        29: goto          33
+        32: iconst_0
+        33: ireturn
+
+  public boolean isRerollEnabled();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnull        32
+         9: aload_0
+        10: invokevirtual #456                // Method isUnlocked:()Z
+        13: ifeq          32
+        16: aload_1
+        17: invokevirtual #268                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getStats:()Ljava/util/Map;
+        20: invokeinterface #271,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+        25: ifne          32
+        28: iconst_1
+        29: goto          33
+        32: iconst_0
+        33: ireturn
+
+  public boolean isResetEnabled();
+    Code:
+         0: aload_0
+         1: invokevirtual #45                 // Method getTemplate:()Lit/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate;
+         4: astore_1
+         5: aload_1
+         6: ifnull        32
+         9: aload_0
+        10: invokevirtual #456                // Method isUnlocked:()Z
+        13: ifeq          32
+        16: aload_1
+        17: invokevirtual #268                // Method it/hurts/sskirillss/relics/api/relics/abilities/AbilityTemplate.getStats:()Ljava/util/Map;
+        20: invokeinterface #271,  1          // InterfaceMethod java/util/Map.isEmpty:()Z
+        25: ifne          32
+        28: iconst_1
+        29: goto          33
+        32: iconst_0
+        33: ireturn
+
+  private int lambda$calculateQuality$0(java.lang.String);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: invokevirtual #318                // Method getStatData:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/api/relics/data/AbilityStatData;
+         5: invokevirtual #684                // Method it/hurts/sskirillss/relics/api/relics/data/AbilityStatData.getQuality:()I
+         8: ireturn
+}

@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+MixinConfigs: morerelics_relics_012_compat.mixins.json
+

@@ -1,0 +1,53 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="morerelics_relics_012_compat"
+version="1.0.2"
+displayName="MoreRelics New Relics Fix"
+authors="Gasharaujo"
+description='''
+Runtime compatibility bridge for More Relics 1.7.6/1.7.7 and Relics 0.12.8.
+Remaps the removed legacy Relics API and translates legacy relic definitions to the current template API.
+Also restores More Relics descriptions in the redesigned Relics interface.
+Forwards ability activation to the original More Relics item callbacks.
+'''
+
+[[mixins]]
+config="morerelics_relics_012_compat.mixins.json"
+
+[[dependencies.morerelics_relics_012_compat]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.205,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.morerelics_relics_012_compat]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.morerelics_relics_012_compat]]
+modId="relics"
+type="required"
+versionRange="[0.12.8,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.morerelics_relics_012_compat]]
+modId="morerelics"
+type="required"
+versionRange="[1.7.6,)"
+ordering="BEFORE"
+side="BOTH"
+
+[[dependencies.morerelics_relics_012_compat]]
+modId="curios"
+type="required"
+versionRange="[9.5.1,)"
+ordering="AFTER"
+side="BOTH"

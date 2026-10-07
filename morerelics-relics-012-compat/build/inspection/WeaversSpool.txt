@@ -1,0 +1,888 @@
+Compiled from "WeaversSpool.java"
+public class com.blorb.morerelics.relics.WeaversSpool extends com.blorb.morerelics.relics.MoreRelicBase {
+  public static final net.minecraft.resources.ResourceLocation SILK_BACKGROUND;
+
+  public static final net.minecraft.resources.ResourceLocation SILK;
+
+  public static final int BIND_COST;
+
+  public static final int SOAR_COST;
+
+  public static final int UNRAVEL_COST;
+
+  public com.blorb.morerelics.relics.WeaversSpool(net.minecraft.world.item.Item$Properties);
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method com/blorb/morerelics/relics/MoreRelicBase."<init>":()V
+         4: return
+
+  public it.hurts.sskirillss.relics.items.relics.base.data.RelicData constructDefaultRelicData();
+    Code:
+         0: invokestatic  #7                  // Method it/hurts/sskirillss/relics/items/relics/base/data/RelicData.builder:()Lit/hurts/sskirillss/relics/items/relics/base/data/RelicData$RelicDataBuilder;
+         3: invokestatic  #13                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData.builder:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder;
+         6: ldc           #18                 // String weaver
+         8: invokestatic  #20                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+        11: ldc           #25                 // String passive_regen_time
+        13: invokestatic  #27                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+        16: ldc2_w        #32                 // double 7.0d
+        19: ldc2_w        #34                 // double 5.0d
+        22: invokevirtual #36                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.initialValue:(DD)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+        25: getstatic     #42                 // Field it/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation.ADD:Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;
+        28: ldc2_w        #48                 // double -0.5d
+        31: invokevirtual #50                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.upgradeModifier:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;D)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+        34: invokedynamic #54,  0             // InvokeDynamic #0:apply:()Ljava/util/function/Function;
+        39: invokevirtual #58                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.formatValue:(Ljava/util/function/Function;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+        42: invokevirtual #62                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;
+        45: invokevirtual #66                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.stat:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+        48: iconst_3
+        49: invokevirtual #72                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.maxLevel:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+        52: iconst_0
+        53: invokevirtual #76                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.requiredLevel:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+        56: invokevirtual #79                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData;
+        59: invokevirtual #82                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder.ability:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder;
+        62: ldc           #88                 // String bind
+        64: invokestatic  #20                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+        67: ldc           #90                 // String healing_amount
+        69: invokestatic  #27                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+        72: ldc2_w        #92                 // double 2.0d
+        75: ldc2_w        #94                 // double 4.0d
+        78: invokevirtual #36                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.initialValue:(DD)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+        81: getstatic     #42                 // Field it/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation.ADD:Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;
+        84: ldc2_w        #96                 // double 0.5d
+        87: invokevirtual #50                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.upgradeModifier:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;D)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+        90: invokedynamic #98,  0             // InvokeDynamic #1:apply:()Ljava/util/function/Function;
+        95: invokevirtual #58                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.formatValue:(Ljava/util/function/Function;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+        98: invokevirtual #62                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;
+       101: invokevirtual #66                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.stat:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       104: iconst_3
+       105: invokevirtual #72                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.maxLevel:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       108: invokestatic  #99                 // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData.builder:()Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder;
+       111: getstatic     #104                // Field it/hurts/sskirillss/relics/items/relics/base/data/cast/misc/CastType.INSTANTANEOUS:Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/CastType;
+       114: invokevirtual #110                // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder.type:(Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/CastType;)Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder;
+       117: ldc           #116                // String silk_amount
+       119: getstatic     #118                // Field it/hurts/sskirillss/relics/items/relics/base/data/cast/misc/PredicateType.CAST:Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/PredicateType;
+       122: aload_0
+       123: invokedynamic #124,  0            // InvokeDynamic #2:apply:(Lcom/blorb/morerelics/relics/WeaversSpool;)Ljava/util/function/BiFunction;
+       128: invokevirtual #127                // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder.predicate:(Ljava/lang/String;Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/PredicateType;Ljava/util/function/BiFunction;)Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder;
+       131: invokevirtual #131                // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData;
+       134: invokevirtual #134                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.active:(Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       137: iconst_0
+       138: invokevirtual #76                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.requiredLevel:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       141: invokevirtual #79                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData;
+       144: invokevirtual #82                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder.ability:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder;
+       147: ldc           #138                // String soar
+       149: invokestatic  #20                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       152: ldc           #140                // String leap_power
+       154: invokestatic  #27                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       157: ldc2_w        #142                // double 1.100000023841858d
+       160: ldc2_w        #144                // double 1.2999999523162842d
+       163: invokevirtual #36                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.initialValue:(DD)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       166: getstatic     #42                 // Field it/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation.ADD:Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;
+       169: ldc2_w        #146                // double 0.10000000149011612d
+       172: invokevirtual #50                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.upgradeModifier:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;D)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       175: invokedynamic #148,  0            // InvokeDynamic #3:apply:()Ljava/util/function/Function;
+       180: invokevirtual #58                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.formatValue:(Ljava/util/function/Function;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       183: invokevirtual #62                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;
+       186: invokevirtual #66                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.stat:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       189: ldc           #149                // String speed_duration
+       191: invokestatic  #27                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       194: ldc2_w        #32                 // double 7.0d
+       197: ldc2_w        #151                // double 10.0d
+       200: invokevirtual #36                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.initialValue:(DD)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       203: getstatic     #42                 // Field it/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation.ADD:Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;
+       206: ldc2_w        #92                 // double 2.0d
+       209: invokevirtual #50                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.upgradeModifier:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;D)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       212: invokedynamic #153,  0            // InvokeDynamic #4:apply:()Ljava/util/function/Function;
+       217: invokevirtual #58                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.formatValue:(Ljava/util/function/Function;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       220: invokevirtual #62                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;
+       223: invokevirtual #66                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.stat:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       226: iconst_3
+       227: invokevirtual #72                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.maxLevel:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       230: invokestatic  #99                 // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData.builder:()Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder;
+       233: getstatic     #104                // Field it/hurts/sskirillss/relics/items/relics/base/data/cast/misc/CastType.INSTANTANEOUS:Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/CastType;
+       236: invokevirtual #110                // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder.type:(Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/CastType;)Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder;
+       239: ldc           #116                // String silk_amount
+       241: getstatic     #118                // Field it/hurts/sskirillss/relics/items/relics/base/data/cast/misc/PredicateType.CAST:Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/PredicateType;
+       244: aload_0
+       245: invokedynamic #154,  0            // InvokeDynamic #5:apply:(Lcom/blorb/morerelics/relics/WeaversSpool;)Ljava/util/function/BiFunction;
+       250: invokevirtual #127                // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder.predicate:(Ljava/lang/String;Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/PredicateType;Ljava/util/function/BiFunction;)Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder;
+       253: invokevirtual #131                // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData;
+       256: invokevirtual #134                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.active:(Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       259: iconst_3
+       260: invokevirtual #76                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.requiredLevel:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       263: invokevirtual #79                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData;
+       266: invokevirtual #82                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder.ability:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder;
+       269: ldc           #155                // String unravel
+       271: invokestatic  #20                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       274: ldc           #157                // String damage
+       276: invokestatic  #27                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       279: ldc2_w        #94                 // double 4.0d
+       282: ldc2_w        #159                // double 6.0d
+       285: invokevirtual #36                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.initialValue:(DD)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       288: getstatic     #42                 // Field it/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation.ADD:Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;
+       291: ldc2_w        #92                 // double 2.0d
+       294: invokevirtual #50                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.upgradeModifier:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;D)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       297: invokedynamic #161,  0            // InvokeDynamic #6:apply:()Ljava/util/function/Function;
+       302: invokevirtual #58                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.formatValue:(Ljava/util/function/Function;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       305: invokevirtual #62                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;
+       308: invokevirtual #66                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.stat:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       311: ldc           #162                // String slow_duration
+       313: invokestatic  #27                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData.builder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       316: ldc2_w        #92                 // double 2.0d
+       319: ldc2_w        #164                // double 3.0d
+       322: invokevirtual #36                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.initialValue:(DD)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       325: getstatic     #42                 // Field it/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation.ADD:Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;
+       328: ldc2_w        #96                 // double 0.5d
+       331: invokevirtual #50                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.upgradeModifier:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/misc/UpgradeOperation;D)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       334: invokedynamic #166,  0            // InvokeDynamic #7:apply:()Ljava/util/function/Function;
+       339: invokevirtual #58                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.formatValue:(Ljava/util/function/Function;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder;
+       342: invokevirtual #62                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData$StatDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;
+       345: invokevirtual #66                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.stat:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/StatData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       348: iconst_3
+       349: invokevirtual #72                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.maxLevel:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       352: invokestatic  #99                 // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData.builder:()Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder;
+       355: getstatic     #104                // Field it/hurts/sskirillss/relics/items/relics/base/data/cast/misc/CastType.INSTANTANEOUS:Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/CastType;
+       358: invokevirtual #110                // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder.type:(Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/CastType;)Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder;
+       361: ldc           #116                // String silk_amount
+       363: getstatic     #118                // Field it/hurts/sskirillss/relics/items/relics/base/data/cast/misc/PredicateType.CAST:Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/PredicateType;
+       366: aload_0
+       367: invokedynamic #167,  0            // InvokeDynamic #8:apply:(Lcom/blorb/morerelics/relics/WeaversSpool;)Ljava/util/function/BiFunction;
+       372: invokevirtual #127                // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder.predicate:(Ljava/lang/String;Lit/hurts/sskirillss/relics/items/relics/base/data/cast/misc/PredicateType;Ljava/util/function/BiFunction;)Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder;
+       375: invokevirtual #131                // Method it/hurts/sskirillss/relics/items/relics/base/data/cast/CastData$CastDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData;
+       378: invokevirtual #134                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.active:(Lit/hurts/sskirillss/relics/items/relics/base/data/cast/CastData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       381: bipush        6
+       383: invokevirtual #76                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.requiredLevel:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder;
+       386: invokevirtual #79                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData$AbilityDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData;
+       389: invokevirtual #82                 // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder.ability:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilityData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder;
+       392: invokevirtual #168                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData$AbilitiesDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData;
+       395: invokevirtual #171                // Method it/hurts/sskirillss/relics/items/relics/base/data/RelicData$RelicDataBuilder.abilities:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/AbilitiesData;)Lit/hurts/sskirillss/relics/items/relics/base/data/RelicData$RelicDataBuilder;
+       398: invokestatic  #177                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData.builder:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder;
+       401: bipush        12
+       403: invokevirtual #182                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder.maxLevel:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder;
+       406: sipush        140
+       409: invokevirtual #187                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder.initialCost:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder;
+       412: bipush        40
+       414: invokevirtual #190                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder.step:(I)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder;
+       417: invokestatic  #193                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourcesData.builder:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourcesData$LevelingSourcesDataBuilder;
+       420: ldc           #18                 // String weaver
+       422: invokestatic  #198                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourceData.abilityBuilder:(Ljava/lang/String;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourceData$LevelingSourceDataBuilder;
+       425: invokevirtual #204                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourceData$LevelingSourceDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourceData;
+       428: invokevirtual #209                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourcesData$LevelingSourcesDataBuilder.source:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourceData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourcesData$LevelingSourcesDataBuilder;
+       431: invokevirtual #215                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourcesData$LevelingSourcesDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourcesData;
+       434: invokevirtual #218                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder.sources:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingSourcesData;)Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder;
+       437: invokevirtual #222                // Method it/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData$LevelingDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData;
+       440: invokevirtual #225                // Method it/hurts/sskirillss/relics/items/relics/base/data/RelicData$RelicDataBuilder.leveling:(Lit/hurts/sskirillss/relics/items/relics/base/data/leveling/LevelingData;)Lit/hurts/sskirillss/relics/items/relics/base/data/RelicData$RelicDataBuilder;
+       443: invokevirtual #229                // Method it/hurts/sskirillss/relics/items/relics/base/data/RelicData$RelicDataBuilder.build:()Lit/hurts/sskirillss/relics/items/relics/base/data/RelicData;
+       446: areturn
+
+  public void curioTick(top.theillusivec4.curios.api.SlotContext, net.minecraft.world.item.ItemStack);
+    Code:
+         0: aload_1
+         1: invokevirtual #232                // Method top/theillusivec4/curios/api/SlotContext.entity:()Lnet/minecraft/world/entity/LivingEntity;
+         4: astore_3
+         5: aload_3
+         6: instanceof    #238                // class net/minecraft/world/entity/player/Player
+         9: ifeq          21
+        12: aload_3
+        13: checkcast     #238                // class net/minecraft/world/entity/player/Player
+        16: astore        4
+        18: goto          22
+        21: return
+        22: aload         4
+        24: invokevirtual #240                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+        27: getfield      #244                // Field net/minecraft/world/level/Level.isClientSide:Z
+        30: ifeq          34
+        33: return
+        34: aload_0
+        35: aload_2
+        36: ldc           #18                 // String weaver
+        38: ldc           #25                 // String passive_regen_time
+        40: invokevirtual #250                // Method getStatValue:(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;Ljava/lang/String;)D
+        43: d2f
+        44: ldc_w         #256                // float 20.0f
+        47: fmul
+        48: fstore        5
+        50: aload_2
+        51: invokestatic  #257                // Method com/blorb/morerelics/dataComponents/DataComponentHandler.getAltIntegerCounter:(Lnet/minecraft/world/item/ItemStack;)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+        54: astore        6
+        56: aload         6
+        58: invokevirtual #263                // Method com/blorb/morerelics/dataComponents/IntegerCounter.current:()I
+        61: istore        7
+        63: iload         7
+        65: i2f
+        66: fload         5
+        68: fcmpg
+        69: ifge          78
+        72: iinc          7, 1
+        75: goto          135
+        78: iconst_0
+        79: istore        7
+        81: aload_2
+        82: invokestatic  #269                // Method com/blorb/morerelics/dataComponents/DataComponentHandler.getIntegerCounter:(Lnet/minecraft/world/item/ItemStack;)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+        85: astore        8
+        87: aload         8
+        89: invokevirtual #263                // Method com/blorb/morerelics/dataComponents/IntegerCounter.current:()I
+        92: istore        9
+        94: iload         9
+        96: iconst_3
+        97: if_icmpge     135
+       100: aload_2
+       101: getstatic     #272                // Field com/blorb/morerelics/dataComponents/DataComponentHandler.INT_COUNTER:Ljava/util/function/Supplier;
+       104: aload         8
+       106: iload         9
+       108: iconst_1
+       109: iadd
+       110: invokevirtual #276                // Method com/blorb/morerelics/dataComponents/IntegerCounter.getUpdatedCounter:(I)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+       113: invokevirtual #280                // Method net/minecraft/world/item/ItemStack.set:(Ljava/util/function/Supplier;Ljava/lang/Object;)Ljava/lang/Object;
+       116: pop
+       117: aload_0
+       118: aload         4
+       120: aload_2
+       121: iconst_3
+       122: invokevirtual #286                // Method spreadRelicExperience:(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;I)V
+       125: aload_0
+       126: aload         4
+       128: iload         9
+       130: iconst_1
+       131: iadd
+       132: invokevirtual #290                // Method sendSilkCounterPayload:(Lnet/minecraft/world/entity/player/Player;I)V
+       135: aload_2
+       136: getstatic     #294                // Field com/blorb/morerelics/dataComponents/DataComponentHandler.ALT_INT_COUNTER:Ljava/util/function/Supplier;
+       139: aload         6
+       141: iload         7
+       143: invokevirtual #276                // Method com/blorb/morerelics/dataComponents/IntegerCounter.getUpdatedCounter:(I)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+       146: invokevirtual #280                // Method net/minecraft/world/item/ItemStack.set:(Ljava/util/function/Supplier;Ljava/lang/Object;)Ljava/lang/Object;
+       149: pop
+       150: return
+
+  public boolean canEquipMultipleCopies();
+    Code:
+         0: iconst_0
+         1: ireturn
+
+  private int getCurrentSilkAmount(net.minecraft.world.item.ItemStack);
+    Code:
+         0: aload_1
+         1: invokestatic  #269                // Method com/blorb/morerelics/dataComponents/DataComponentHandler.getIntegerCounter:(Lnet/minecraft/world/item/ItemStack;)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+         4: invokevirtual #263                // Method com/blorb/morerelics/dataComponents/IntegerCounter.current:()I
+         7: ireturn
+
+  public void castActiveAbility(net.minecraft.world.item.ItemStack, net.minecraft.world.entity.player.Player, java.lang.String, it.hurts.sskirillss.relics.items.relics.base.data.cast.misc.CastType, it.hurts.sskirillss.relics.items.relics.base.data.cast.misc.CastStage);
+    Code:
+         0: aload_2
+         1: invokevirtual #240                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+         4: getfield      #244                // Field net/minecraft/world/level/Level.isClientSide:Z
+         7: ifeq          11
+        10: return
+        11: aload_1
+        12: invokestatic  #269                // Method com/blorb/morerelics/dataComponents/DataComponentHandler.getIntegerCounter:(Lnet/minecraft/world/item/ItemStack;)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+        15: astore        6
+        17: aload         6
+        19: invokevirtual #263                // Method com/blorb/morerelics/dataComponents/IntegerCounter.current:()I
+        22: istore        7
+        24: aload_3
+        25: ldc           #88                 // String bind
+        27: invokevirtual #297                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        30: ifeq          53
+        33: iload         7
+        35: bipush        6
+        37: if_icmplt     53
+        40: aload_0
+        41: aload_1
+        42: aload_2
+        43: aload         6
+        45: iload         7
+        47: invokevirtual #303                // Method applyBind:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lcom/blorb/morerelics/dataComponents/IntegerCounter;I)V
+        50: goto          107
+        53: aload_3
+        54: ldc           #138                // String soar
+        56: invokevirtual #297                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        59: ifeq          81
+        62: iload         7
+        64: iconst_3
+        65: if_icmplt     81
+        68: aload_0
+        69: aload_1
+        70: aload_2
+        71: aload         6
+        73: iload         7
+        75: invokevirtual #307                // Method applySoar:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lcom/blorb/morerelics/dataComponents/IntegerCounter;I)V
+        78: goto          107
+        81: aload_3
+        82: ldc           #155                // String unravel
+        84: invokevirtual #297                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        87: ifeq          107
+        90: iload         7
+        92: bipush        7
+        94: if_icmplt     107
+        97: aload_0
+        98: aload_1
+        99: aload_2
+       100: aload         6
+       102: iload         7
+       104: invokevirtual #310                // Method applyUnravel:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lcom/blorb/morerelics/dataComponents/IntegerCounter;I)V
+       107: return
+
+  private void applyBind(net.minecraft.world.item.ItemStack, net.minecraft.world.entity.player.Player, com.blorb.morerelics.dataComponents.IntegerCounter, int);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: ldc           #88                 // String bind
+         4: bipush        20
+         6: invokevirtual #313                // Method setAbilityCooldown:(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;I)V
+         9: aload_1
+        10: getstatic     #272                // Field com/blorb/morerelics/dataComponents/DataComponentHandler.INT_COUNTER:Ljava/util/function/Supplier;
+        13: aload_3
+        14: iload         4
+        16: bipush        6
+        18: isub
+        19: invokevirtual #276                // Method com/blorb/morerelics/dataComponents/IntegerCounter.getUpdatedCounter:(I)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+        22: invokevirtual #280                // Method net/minecraft/world/item/ItemStack.set:(Ljava/util/function/Supplier;Ljava/lang/Object;)Ljava/lang/Object;
+        25: pop
+        26: aload_2
+        27: aload_0
+        28: aload_1
+        29: ldc           #88                 // String bind
+        31: ldc           #90                 // String healing_amount
+        33: invokevirtual #250                // Method getStatValue:(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;Ljava/lang/String;)D
+        36: d2f
+        37: invokevirtual #317                // Method net/minecraft/world/entity/player/Player.heal:(F)V
+        40: aload_2
+        41: invokevirtual #240                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+        44: aconst_null
+        45: aload_2
+        46: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+        49: getfield      #325                // Field net/minecraft/world/phys/Vec3.x:D
+        52: aload_2
+        53: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+        56: getfield      #331                // Field net/minecraft/world/phys/Vec3.y:D
+        59: aload_2
+        60: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+        63: getfield      #334                // Field net/minecraft/world/phys/Vec3.z:D
+        66: getstatic     #337                // Field com/blorb/morerelics/MoreRelics.HEAL:Lnet/minecraft/core/Holder;
+        69: getstatic     #343                // Field net/minecraft/sounds/SoundSource.MASTER:Lnet/minecraft/sounds/SoundSource;
+        72: ldc_w         #349                // float 1.1f
+        75: fconst_1
+        76: invokevirtual #350                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/player/Player;DDDLnet/minecraft/core/Holder;Lnet/minecraft/sounds/SoundSource;FF)V
+        79: aload_2
+        80: new           #354                // class net/minecraft/world/effect/MobEffectInstance
+        83: dup
+        84: getstatic     #356                // Field net/minecraft/world/effect/MobEffects.ABSORPTION:Lnet/minecraft/core/Holder;
+        87: bipush        80
+        89: iconst_0
+        90: invokespecial #361                // Method net/minecraft/world/effect/MobEffectInstance."<init>":(Lnet/minecraft/core/Holder;II)V
+        93: invokevirtual #364                // Method net/minecraft/world/entity/player/Player.addEffect:(Lnet/minecraft/world/effect/MobEffectInstance;)Z
+        96: pop
+        97: aload_0
+        98: aload_2
+        99: iload         4
+       101: bipush        6
+       103: isub
+       104: invokevirtual #290                // Method sendSilkCounterPayload:(Lnet/minecraft/world/entity/player/Player;I)V
+       107: return
+
+  private void applySoar(net.minecraft.world.item.ItemStack, net.minecraft.world.entity.player.Player, com.blorb.morerelics.dataComponents.IntegerCounter, int);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: ldc           #138                // String soar
+         4: bipush        20
+         6: invokevirtual #313                // Method setAbilityCooldown:(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;I)V
+         9: aload_1
+        10: getstatic     #272                // Field com/blorb/morerelics/dataComponents/DataComponentHandler.INT_COUNTER:Ljava/util/function/Supplier;
+        13: aload_3
+        14: iload         4
+        16: iconst_3
+        17: isub
+        18: invokevirtual #276                // Method com/blorb/morerelics/dataComponents/IntegerCounter.getUpdatedCounter:(I)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+        21: invokevirtual #280                // Method net/minecraft/world/item/ItemStack.set:(Ljava/util/function/Supplier;Ljava/lang/Object;)Ljava/lang/Object;
+        24: pop
+        25: aload_2
+        26: invokevirtual #240                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+        29: aconst_null
+        30: aload_2
+        31: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+        34: getfield      #325                // Field net/minecraft/world/phys/Vec3.x:D
+        37: aload_2
+        38: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+        41: getfield      #331                // Field net/minecraft/world/phys/Vec3.y:D
+        44: aload_2
+        45: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+        48: getfield      #334                // Field net/minecraft/world/phys/Vec3.z:D
+        51: getstatic     #368                // Field net/minecraft/sounds/SoundEvents.ENDER_DRAGON_FLAP:Lnet/minecraft/sounds/SoundEvent;
+        54: getstatic     #343                // Field net/minecraft/sounds/SoundSource.MASTER:Lnet/minecraft/sounds/SoundSource;
+        57: ldc_w         #374                // float 0.7f
+        60: ldc_w         #375                // float 1.2f
+        63: invokevirtual #376                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/player/Player;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+        66: aload_2
+        67: invokevirtual #379                // Method net/minecraft/world/entity/player/Player.getLookAngle:()Lnet/minecraft/world/phys/Vec3;
+        70: aload_0
+        71: aload_1
+        72: ldc           #138                // String soar
+        74: ldc           #140                // String leap_power
+        76: invokevirtual #250                // Method getStatValue:(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;Ljava/lang/String;)D
+        79: invokevirtual #382                // Method net/minecraft/world/phys/Vec3.scale:(D)Lnet/minecraft/world/phys/Vec3;
+        82: astore        5
+        84: aload_2
+        85: invokevirtual #386                // Method net/minecraft/world/entity/player/Player.resetFallDistance:()V
+        88: new           #389                // class com/blorb/morerelics/network/SoarVelocityPayload
+        91: dup
+        92: aload         5
+        94: getfield      #325                // Field net/minecraft/world/phys/Vec3.x:D
+        97: aload         5
+        99: getfield      #331                // Field net/minecraft/world/phys/Vec3.y:D
+       102: aload         5
+       104: getfield      #334                // Field net/minecraft/world/phys/Vec3.z:D
+       107: invokespecial #391                // Method com/blorb/morerelics/network/SoarVelocityPayload."<init>":(DDD)V
+       110: astore        6
+       112: aload_2
+       113: checkcast     #394                // class net/minecraft/server/level/ServerPlayer
+       116: aload         6
+       118: iconst_0
+       119: anewarray     #396                // class net/minecraft/network/protocol/common/custom/CustomPacketPayload
+       122: invokestatic  #398                // Method net/neoforged/neoforge/network/PacketDistributor.sendToPlayer:(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;[Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)V
+       125: aload_2
+       126: new           #354                // class net/minecraft/world/effect/MobEffectInstance
+       129: dup
+       130: getstatic     #404                // Field net/minecraft/world/effect/MobEffects.MOVEMENT_SPEED:Lnet/minecraft/core/Holder;
+       133: aload_0
+       134: aload_1
+       135: ldc           #138                // String soar
+       137: ldc           #149                // String speed_duration
+       139: invokevirtual #250                // Method getStatValue:(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;Ljava/lang/String;)D
+       142: ldc2_w        #407                // double 20.0d
+       145: dmul
+       146: d2i
+       147: iconst_0
+       148: invokespecial #361                // Method net/minecraft/world/effect/MobEffectInstance."<init>":(Lnet/minecraft/core/Holder;II)V
+       151: invokevirtual #364                // Method net/minecraft/world/entity/player/Player.addEffect:(Lnet/minecraft/world/effect/MobEffectInstance;)Z
+       154: pop
+       155: aload_0
+       156: aload_2
+       157: iload         4
+       159: iconst_3
+       160: isub
+       161: invokevirtual #290                // Method sendSilkCounterPayload:(Lnet/minecraft/world/entity/player/Player;I)V
+       164: return
+
+  private void applyUnravel(net.minecraft.world.item.ItemStack, net.minecraft.world.entity.player.Player, com.blorb.morerelics.dataComponents.IntegerCounter, int);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: ldc           #155                // String unravel
+         4: bipush        20
+         6: invokevirtual #313                // Method setAbilityCooldown:(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;I)V
+         9: aload_1
+        10: getstatic     #272                // Field com/blorb/morerelics/dataComponents/DataComponentHandler.INT_COUNTER:Ljava/util/function/Supplier;
+        13: aload_3
+        14: iload         4
+        16: bipush        7
+        18: isub
+        19: invokevirtual #276                // Method com/blorb/morerelics/dataComponents/IntegerCounter.getUpdatedCounter:(I)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+        22: invokevirtual #280                // Method net/minecraft/world/item/ItemStack.set:(Ljava/util/function/Supplier;Ljava/lang/Object;)Ljava/lang/Object;
+        25: pop
+        26: aload_2
+        27: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+        30: astore        5
+        32: ldc_w         #409                // float 4.0f
+        35: fstore        6
+        37: aload_0
+        38: aload_1
+        39: ldc           #155                // String unravel
+        41: ldc           #157                // String damage
+        43: invokevirtual #250                // Method getStatValue:(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;Ljava/lang/String;)D
+        46: d2f
+        47: fstore        7
+        49: aload_0
+        50: aload_1
+        51: ldc           #155                // String unravel
+        53: ldc           #162                // String slow_duration
+        55: invokevirtual #250                // Method getStatValue:(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;Ljava/lang/String;)D
+        58: d2f
+        59: fstore        8
+        61: aload_0
+        62: aload_2
+        63: invokevirtual #240                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+        66: aload_2
+        67: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+        70: iconst_1
+        71: fload         6
+        73: invokevirtual #410                // Method spawnSilkParticles:(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/phys/Vec3;IF)V
+        76: new           #414                // class net/minecraft/world/phys/AABB
+        79: dup
+        80: aload         5
+        82: getfield      #325                // Field net/minecraft/world/phys/Vec3.x:D
+        85: fload         6
+        87: f2d
+        88: dsub
+        89: aload         5
+        91: getfield      #331                // Field net/minecraft/world/phys/Vec3.y:D
+        94: fload         6
+        96: f2d
+        97: dsub
+        98: aload         5
+       100: getfield      #334                // Field net/minecraft/world/phys/Vec3.z:D
+       103: fload         6
+       105: f2d
+       106: dsub
+       107: aload         5
+       109: getfield      #325                // Field net/minecraft/world/phys/Vec3.x:D
+       112: fload         6
+       114: f2d
+       115: dadd
+       116: aload         5
+       118: getfield      #331                // Field net/minecraft/world/phys/Vec3.y:D
+       121: fload         6
+       123: f2d
+       124: dadd
+       125: aload         5
+       127: getfield      #334                // Field net/minecraft/world/phys/Vec3.z:D
+       130: fload         6
+       132: f2d
+       133: dadd
+       134: invokespecial #416                // Method net/minecraft/world/phys/AABB."<init>":(DDDDDD)V
+       137: astore        9
+       139: aload_2
+       140: invokevirtual #240                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+       143: aload_2
+       144: aload         9
+       146: invokevirtual #419                // Method net/minecraft/world/level/Level.getEntities:(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/AABB;)Ljava/util/List;
+       149: astore        10
+       151: aload_2
+       152: invokevirtual #240                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+       155: aconst_null
+       156: aload_2
+       157: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+       160: getfield      #325                // Field net/minecraft/world/phys/Vec3.x:D
+       163: aload_2
+       164: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+       167: getfield      #331                // Field net/minecraft/world/phys/Vec3.y:D
+       170: aload_2
+       171: invokevirtual #321                // Method net/minecraft/world/entity/player/Player.position:()Lnet/minecraft/world/phys/Vec3;
+       174: getfield      #334                // Field net/minecraft/world/phys/Vec3.z:D
+       177: getstatic     #423                // Field net/minecraft/sounds/SoundEvents.FIREWORK_ROCKET_BLAST:Lnet/minecraft/sounds/SoundEvent;
+       180: getstatic     #343                // Field net/minecraft/sounds/SoundSource.MASTER:Lnet/minecraft/sounds/SoundSource;
+       183: ldc_w         #374                // float 0.7f
+       186: ldc_w         #426                // float 0.6f
+       189: invokevirtual #376                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/player/Player;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+       192: aload         10
+       194: invokeinterface #427,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       199: astore        11
+       201: aload         11
+       203: invokeinterface #433,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       208: ifeq          299
+       211: aload         11
+       213: invokeinterface #439,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       218: checkcast     #443                // class net/minecraft/world/entity/Entity
+       221: astore        12
+       223: aload         12
+       225: instanceof    #445                // class net/minecraft/world/entity/LivingEntity
+       228: ifeq          296
+       231: aload         12
+       233: checkcast     #445                // class net/minecraft/world/entity/LivingEntity
+       236: astore        13
+       238: aload_2
+       239: aload         12
+       241: if_acmpeq     296
+       244: aload         13
+       246: new           #447                // class net/minecraft/world/damagesource/DamageSource
+       249: dup
+       250: aload         13
+       252: invokevirtual #449                // Method net/minecraft/world/entity/LivingEntity.damageSources:()Lnet/minecraft/world/damagesource/DamageSources;
+       255: invokevirtual #453                // Method net/minecraft/world/damagesource/DamageSources.generic:()Lnet/minecraft/world/damagesource/DamageSource;
+       258: invokevirtual #459                // Method net/minecraft/world/damagesource/DamageSource.typeHolder:()Lnet/minecraft/core/Holder;
+       261: aload_2
+       262: aload_2
+       263: invokespecial #463                // Method net/minecraft/world/damagesource/DamageSource."<init>":(Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)V
+       266: fload         7
+       268: invokevirtual #466                // Method net/minecraft/world/entity/LivingEntity.hurt:(Lnet/minecraft/world/damagesource/DamageSource;F)Z
+       271: pop
+       272: aload         13
+       274: new           #354                // class net/minecraft/world/effect/MobEffectInstance
+       277: dup
+       278: getstatic     #470                // Field net/minecraft/world/effect/MobEffects.MOVEMENT_SLOWDOWN:Lnet/minecraft/core/Holder;
+       281: fload         8
+       283: ldc_w         #256                // float 20.0f
+       286: fmul
+       287: f2i
+       288: iconst_2
+       289: invokespecial #361                // Method net/minecraft/world/effect/MobEffectInstance."<init>":(Lnet/minecraft/core/Holder;II)V
+       292: invokevirtual #473                // Method net/minecraft/world/entity/LivingEntity.addEffect:(Lnet/minecraft/world/effect/MobEffectInstance;)Z
+       295: pop
+       296: goto          201
+       299: aload_0
+       300: aload_2
+       301: iload         4
+       303: bipush        7
+       305: isub
+       306: invokevirtual #290                // Method sendSilkCounterPayload:(Lnet/minecraft/world/entity/player/Player;I)V
+       309: return
+
+  private void sendSilkCounterPayload(net.minecraft.world.entity.player.Player, int);
+    Code:
+         0: new           #474                // class com/blorb/morerelics/network/SilkCounterPayload
+         3: dup
+         4: iload_2
+         5: invokespecial #476                // Method com/blorb/morerelics/network/SilkCounterPayload."<init>":(I)V
+         8: astore_3
+         9: aload_1
+        10: checkcast     #394                // class net/minecraft/server/level/ServerPlayer
+        13: aload_3
+        14: iconst_0
+        15: anewarray     #396                // class net/minecraft/network/protocol/common/custom/CustomPacketPayload
+        18: invokestatic  #398                // Method net/neoforged/neoforge/network/PacketDistributor.sendToPlayer:(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;[Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)V
+        21: return
+
+  public static void onPlayerAttack(net.neoforged.neoforge.event.entity.living.LivingDamageEvent$Pre);
+    Code:
+         0: aload_0
+         1: invokevirtual #479                // Method net/neoforged/neoforge/event/entity/living/LivingDamageEvent$Pre.getSource:()Lnet/minecraft/world/damagesource/DamageSource;
+         4: invokevirtual #484                // Method net/minecraft/world/damagesource/DamageSource.getEntity:()Lnet/minecraft/world/entity/Entity;
+         7: astore_2
+         8: aload_2
+         9: instanceof    #238                // class net/minecraft/world/entity/player/Player
+        12: ifeq          30
+        15: aload_2
+        16: checkcast     #238                // class net/minecraft/world/entity/player/Player
+        19: astore_1
+        20: aload_1
+        21: invokevirtual #240                // Method net/minecraft/world/entity/player/Player.level:()Lnet/minecraft/world/level/Level;
+        24: getfield      #244                // Field net/minecraft/world/level/Level.isClientSide:Z
+        27: ifeq          31
+        30: return
+        31: aload_1
+        32: getstatic     #488                // Field com/blorb/morerelics/MoreRelics.WEAVERS_SPOOL:Lnet/neoforged/neoforge/registries/DeferredItem;
+        35: invokevirtual #492                // Method net/neoforged/neoforge/registries/DeferredItem.get:()Ljava/lang/Object;
+        38: checkcast     #497                // class net/minecraft/world/item/Item
+        41: invokestatic  #499                // Method it/hurts/sskirillss/relics/utils/EntityUtils.findEquippedCurios:(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/Item;)Ljava/util/List;
+        44: aload_1
+        45: invokedynamic #505,  0            // InvokeDynamic #9:accept:(Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
+        50: invokeinterface #509,  2          // InterfaceMethod java/util/List.forEach:(Ljava/util/function/Consumer;)V
+        55: return
+
+  private void spawnSilkParticles(net.minecraft.world.level.Level, net.minecraft.world.phys.Vec3, int, float);
+    Code:
+         0: bipush        30
+         2: iload_3
+         3: bipush        60
+         5: imul
+         6: iadd
+         7: istore        5
+         9: iload         5
+        11: sipush        400
+        14: if_icmple     22
+        17: sipush        400
+        20: istore        5
+        22: aload_1
+        23: checkcast     #513                // class net/minecraft/server/level/ServerLevel
+        26: astore        6
+        28: aload_1
+        29: invokevirtual #515                // Method net/minecraft/world/level/Level.players:()Ljava/util/List;
+        32: astore        7
+        34: aload         7
+        36: invokeinterface #427,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+        41: astore        8
+        43: aload         8
+        45: invokeinterface #433,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+        50: ifeq          106
+        53: aload         8
+        55: invokeinterface #439,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        60: checkcast     #394                // class net/minecraft/server/level/ServerPlayer
+        63: astore        9
+        65: aload         6
+        67: aload         9
+        69: getstatic     #519                // Field net/minecraft/core/particles/ParticleTypes.END_ROD:Lnet/minecraft/core/particles/SimpleParticleType;
+        72: iconst_1
+        73: aload_2
+        74: getfield      #325                // Field net/minecraft/world/phys/Vec3.x:D
+        77: aload_2
+        78: getfield      #331                // Field net/minecraft/world/phys/Vec3.y:D
+        81: dconst_1
+        82: dadd
+        83: aload_2
+        84: getfield      #334                // Field net/minecraft/world/phys/Vec3.z:D
+        87: iload         5
+        89: dconst_0
+        90: dconst_0
+        91: dconst_0
+        92: ldc2_w        #525                // double 0.025d
+        95: fload         4
+        97: f2d
+        98: dmul
+        99: invokevirtual #527                // Method net/minecraft/server/level/ServerLevel.sendParticles:(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/core/particles/ParticleOptions;ZDDDIDDDD)Z
+       102: pop
+       103: goto          43
+       106: return
+
+  private static void lambda$onPlayerAttack$9(net.minecraft.world.entity.player.Player, net.minecraft.world.item.ItemStack);
+    Code:
+         0: aload_1
+         1: invokevirtual #531                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+         4: checkcast     #251                // class com/blorb/morerelics/relics/WeaversSpool
+         7: astore_2
+         8: aload_1
+         9: invokestatic  #269                // Method com/blorb/morerelics/dataComponents/DataComponentHandler.getIntegerCounter:(Lnet/minecraft/world/item/ItemStack;)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+        12: astore_3
+        13: aload_3
+        14: invokevirtual #263                // Method com/blorb/morerelics/dataComponents/IntegerCounter.current:()I
+        17: istore        4
+        19: iload         4
+        21: bipush        10
+        23: if_icmpge     75
+        26: aload_1
+        27: getstatic     #272                // Field com/blorb/morerelics/dataComponents/DataComponentHandler.INT_COUNTER:Ljava/util/function/Supplier;
+        30: aload_3
+        31: iload         4
+        33: iconst_1
+        34: iadd
+        35: invokevirtual #276                // Method com/blorb/morerelics/dataComponents/IntegerCounter.getUpdatedCounter:(I)Lcom/blorb/morerelics/dataComponents/IntegerCounter;
+        38: invokevirtual #280                // Method net/minecraft/world/item/ItemStack.set:(Ljava/util/function/Supplier;Ljava/lang/Object;)Ljava/lang/Object;
+        41: pop
+        42: aload_2
+        43: aload_0
+        44: aload_1
+        45: iconst_3
+        46: invokevirtual #286                // Method spreadRelicExperience:(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;I)V
+        49: new           #474                // class com/blorb/morerelics/network/SilkCounterPayload
+        52: dup
+        53: aload_3
+        54: invokevirtual #263                // Method com/blorb/morerelics/dataComponents/IntegerCounter.current:()I
+        57: invokespecial #476                // Method com/blorb/morerelics/network/SilkCounterPayload."<init>":(I)V
+        60: astore        5
+        62: aload_0
+        63: checkcast     #394                // class net/minecraft/server/level/ServerPlayer
+        66: aload         5
+        68: iconst_0
+        69: anewarray     #396                // class net/minecraft/network/protocol/common/custom/CustomPacketPayload
+        72: invokestatic  #398                // Method net/neoforged/neoforge/network/PacketDistributor.sendToPlayer:(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;[Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)V
+        75: return
+
+  private java.lang.Boolean lambda$constructDefaultRelicData$8(net.minecraft.world.entity.player.Player, net.minecraft.world.item.ItemStack);
+    Code:
+         0: aload_0
+         1: aload_2
+         2: invokevirtual #535                // Method getCurrentSilkAmount:(Lnet/minecraft/world/item/ItemStack;)I
+         5: bipush        7
+         7: if_icmplt     14
+        10: iconst_1
+        11: goto          15
+        14: iconst_0
+        15: invokestatic  #539                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        18: areturn
+
+  private static java.lang.Number lambda$constructDefaultRelicData$7(java.lang.Double);
+    Code:
+         0: aload_0
+         1: invokevirtual #545                // Method java/lang/Double.doubleValue:()D
+         4: ldc2_w        #92                 // double 2.0d
+         7: dmul
+         8: invokestatic  #551                // Method java/lang/Math.round:(D)J
+        11: l2f
+        12: fconst_2
+        13: fdiv
+        14: invokestatic  #557                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+        17: areturn
+
+  private static java.lang.Number lambda$constructDefaultRelicData$6(java.lang.Double);
+    Code:
+         0: aload_0
+         1: invokevirtual #545                // Method java/lang/Double.doubleValue:()D
+         4: ldc2_w        #562                // double 100.0d
+         7: dmul
+         8: invokestatic  #551                // Method java/lang/Math.round:(D)J
+        11: l2f
+        12: ldc_w         #564                // float 100.0f
+        15: fdiv
+        16: invokestatic  #557                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+        19: areturn
+
+  private java.lang.Boolean lambda$constructDefaultRelicData$5(net.minecraft.world.entity.player.Player, net.minecraft.world.item.ItemStack);
+    Code:
+         0: aload_0
+         1: aload_2
+         2: invokevirtual #535                // Method getCurrentSilkAmount:(Lnet/minecraft/world/item/ItemStack;)I
+         5: iconst_3
+         6: if_icmplt     13
+         9: iconst_1
+        10: goto          14
+        13: iconst_0
+        14: invokestatic  #539                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        17: areturn
+
+  private static java.lang.Number lambda$constructDefaultRelicData$4(java.lang.Double);
+    Code:
+         0: aload_0
+         1: invokevirtual #545                // Method java/lang/Double.doubleValue:()D
+         4: ldc2_w        #562                // double 100.0d
+         7: dmul
+         8: invokestatic  #551                // Method java/lang/Math.round:(D)J
+        11: l2f
+        12: ldc_w         #564                // float 100.0f
+        15: fdiv
+        16: invokestatic  #557                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+        19: areturn
+
+  private static java.lang.Number lambda$constructDefaultRelicData$3(java.lang.Double);
+    Code:
+         0: aload_0
+         1: invokevirtual #545                // Method java/lang/Double.doubleValue:()D
+         4: ldc2_w        #562                // double 100.0d
+         7: dmul
+         8: invokestatic  #551                // Method java/lang/Math.round:(D)J
+        11: l2f
+        12: ldc_w         #564                // float 100.0f
+        15: fdiv
+        16: invokestatic  #557                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+        19: areturn
+
+  private java.lang.Boolean lambda$constructDefaultRelicData$2(net.minecraft.world.entity.player.Player, net.minecraft.world.item.ItemStack);
+    Code:
+         0: aload_0
+         1: aload_2
+         2: invokevirtual #535                // Method getCurrentSilkAmount:(Lnet/minecraft/world/item/ItemStack;)I
+         5: bipush        6
+         7: if_icmplt     14
+        10: iconst_1
+        11: goto          15
+        14: iconst_0
+        15: invokestatic  #539                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        18: areturn
+
+  private static java.lang.Number lambda$constructDefaultRelicData$1(java.lang.Double);
+    Code:
+         0: aload_0
+         1: invokevirtual #545                // Method java/lang/Double.doubleValue:()D
+         4: ldc2_w        #92                 // double 2.0d
+         7: dmul
+         8: invokestatic  #551                // Method java/lang/Math.round:(D)J
+        11: l2f
+        12: fconst_2
+        13: fdiv
+        14: invokestatic  #557                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+        17: areturn
+
+  private static java.lang.Number lambda$constructDefaultRelicData$0(java.lang.Double);
+    Code:
+         0: aload_0
+         1: invokevirtual #545                // Method java/lang/Double.doubleValue:()D
+         4: ldc2_w        #562                // double 100.0d
+         7: dmul
+         8: invokestatic  #551                // Method java/lang/Math.round:(D)J
+        11: l2f
+        12: ldc_w         #564                // float 100.0f
+        15: fdiv
+        16: invokestatic  #557                // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+        19: areturn
+
+  static {};
+    Code:
+         0: ldc_w         #565                // String morerelics
+         3: ldc_w         #567                // String textures/gui/silk/background.png
+         6: invokestatic  #569                // Method net/minecraft/resources/ResourceLocation.fromNamespaceAndPath:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
+         9: putstatic     #575                // Field SILK_BACKGROUND:Lnet/minecraft/resources/ResourceLocation;
+        12: ldc_w         #565                // String morerelics
+        15: ldc_w         #579                // String textures/gui/silk/silk.png
+        18: invokestatic  #569                // Method net/minecraft/resources/ResourceLocation.fromNamespaceAndPath:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
+        21: putstatic     #581                // Field SILK:Lnet/minecraft/resources/ResourceLocation;
+        24: return
+}

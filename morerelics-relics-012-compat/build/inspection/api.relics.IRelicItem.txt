@@ -1,0 +1,41 @@
+Compiled from "IRelicItem.java"
+public interface it.hurts.sskirillss.relics.api.relics.IRelicItem extends it.hurts.sskirillss.relics.api.relics.IRelicTemplateHolder {
+  public default net.minecraft.world.item.Item getItem();
+    Code:
+         0: aload_0
+         1: astore_2
+         2: aload_2
+         3: instanceof    #1                  // class net/minecraft/world/item/Item
+         6: ifeq          16
+         9: aload_2
+        10: checkcast     #1                  // class net/minecraft/world/item/Item
+        13: astore_1
+        14: aload_1
+        15: areturn
+        16: new           #3                  // class java/lang/IllegalStateException
+        19: dup
+        20: ldc           #5                  // String Relic interface is not associated with an Item class
+        22: invokespecial #7                  // Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+        25: athrow
+
+  public default it.hurts.sskirillss.relics.api.relics.data.RelicData getRelicData(net.minecraft.world.entity.LivingEntity, net.minecraft.world.item.ItemStack);
+    Code:
+         0: new           #11                 // class it/hurts/sskirillss/relics/api/relics/data/RelicData
+         3: dup
+         4: aload_0
+         5: aload_1
+         6: aload_2
+         7: invokespecial #13                 // Method it/hurts/sskirillss/relics/api/relics/data/RelicData."<init>":(Lit/hurts/sskirillss/relics/api/relics/IRelicItem;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V
+        10: areturn
+
+  public default void activateAbility(it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationContext);
+    Code:
+         0: return
+
+  public abstract java.lang.String getConfigRoute();
+
+  public default it.hurts.sskirillss.relics.config.data.RelicConfigData constructDefaultConfigData(it.hurts.sskirillss.relics.config.data.RelicConfigData);
+    Code:
+         0: aload_1
+         1: areturn
+}

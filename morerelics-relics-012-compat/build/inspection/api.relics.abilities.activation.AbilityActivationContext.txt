@@ -1,0 +1,82 @@
+Compiled from "AbilityActivationContext.java"
+public final class it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationContext extends java.lang.Record {
+  private final net.minecraft.world.entity.player.Player player;
+
+  private final net.minecraft.world.item.ItemStack stack;
+
+  private final it.hurts.sskirillss.relics.api.relics.data.AbilityData abilityData;
+
+  private final it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationType type;
+
+  private final it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationStage stage;
+
+  public it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationContext(net.minecraft.world.entity.player.Player, net.minecraft.world.item.ItemStack, it.hurts.sskirillss.relics.api.relics.data.AbilityData, it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationType, it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationStage);
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Record."<init>":()V
+         4: aload_0
+         5: aload_1
+         6: putfield      #7                  // Field player:Lnet/minecraft/world/entity/player/Player;
+         9: aload_0
+        10: aload_2
+        11: putfield      #13                 // Field stack:Lnet/minecraft/world/item/ItemStack;
+        14: aload_0
+        15: aload_3
+        16: putfield      #17                 // Field abilityData:Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;
+        19: aload_0
+        20: aload         4
+        22: putfield      #21                 // Field type:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;
+        25: aload_0
+        26: aload         5
+        28: putfield      #25                 // Field stage:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage;
+        31: return
+
+  public final java.lang.String toString();
+    Code:
+         0: aload_0
+         1: invokedynamic #29,  0             // InvokeDynamic #0:toString:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationContext;)Ljava/lang/String;
+         6: areturn
+
+  public final int hashCode();
+    Code:
+         0: aload_0
+         1: invokedynamic #33,  0             // InvokeDynamic #0:hashCode:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationContext;)I
+         6: ireturn
+
+  public final boolean equals(java.lang.Object);
+    Code:
+         0: aload_0
+         1: aload_1
+         2: invokedynamic #37,  0             // InvokeDynamic #0:equals:(Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationContext;Ljava/lang/Object;)Z
+         7: ireturn
+
+  public net.minecraft.world.entity.player.Player player();
+    Code:
+         0: aload_0
+         1: getfield      #7                  // Field player:Lnet/minecraft/world/entity/player/Player;
+         4: areturn
+
+  public net.minecraft.world.item.ItemStack stack();
+    Code:
+         0: aload_0
+         1: getfield      #13                 // Field stack:Lnet/minecraft/world/item/ItemStack;
+         4: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.data.AbilityData abilityData();
+    Code:
+         0: aload_0
+         1: getfield      #17                 // Field abilityData:Lit/hurts/sskirillss/relics/api/relics/data/AbilityData;
+         4: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationType type();
+    Code:
+         0: aload_0
+         1: getfield      #21                 // Field type:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationType;
+         4: areturn
+
+  public it.hurts.sskirillss.relics.api.relics.abilities.activation.AbilityActivationStage stage();
+    Code:
+         0: aload_0
+         1: getfield      #25                 // Field stage:Lit/hurts/sskirillss/relics/api/relics/abilities/activation/AbilityActivationStage;
+         4: areturn
+}

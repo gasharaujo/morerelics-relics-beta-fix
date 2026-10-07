@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8.7",
+  "package": "dev.codex.morerelicscompat.mixin",
+  "plugin": "dev.codex.morerelicscompat.mixin.LegacyReferenceRemapPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LegacyReferenceRemapMixin",
+    "MoreRelicBaseCompatMixin",
+    "RelicItemCuriosCompatMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+
